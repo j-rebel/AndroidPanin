@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AndroidPanin</string>
+    <string name="first_screen_name">FirstActivity</string>
+</resources>
