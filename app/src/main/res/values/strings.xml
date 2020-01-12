@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">AndroidPanin</string>
-    <string name="first_screen_name">FirstActivity</string>
     <string name="splash_screen_name">SplashScreenActivity</string>
     <string name="hello_img_description">Hello image</string>
 </resources>
