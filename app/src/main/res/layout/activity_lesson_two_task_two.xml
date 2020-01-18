@@ -19,4 +19,51 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/currentImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="112dp"
+        android:contentDescription="@string/start_screen_option_122"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/currentImageLink"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/start_screen_option_122"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentImage"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/backwardButton"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/backward_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/forwardButton"
+        app:layout_constraintEnd_toStartOf="@+id/forwardButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/forwardButton"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/forward_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backwardButton"
+        app:layout_constraintTop_toBottomOf="@+id/currentImageLink" />
 </androidx.constraintlayout.widget.ConstraintLayout>

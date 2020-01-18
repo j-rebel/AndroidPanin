@@ -100,15 +100,17 @@
         android:id="@+id/nameInputLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
         android:text="@string/name_input_fiels"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="100dp" />
+        app:layout_constraintBottom_toTopOf="@+id/nameInput"
+        app:layout_constraintStart_toStartOf="@+id/nameInput" />
 
     <TextView
         android:id="@+id/emailInputLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
         android:text="@string/email_input_field"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="191dp" />
+        app:layout_constraintStart_toStartOf="@+id/nameInput"
+        app:layout_constraintTop_toBottomOf="@+id/nameInput" />
 </androidx.constraintlayout.widget.ConstraintLayout>
