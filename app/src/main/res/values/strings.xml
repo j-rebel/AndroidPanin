@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">AndroidPanin</string>
-    <string name="splash_screen_name">SplashScreenActivity</string>
-    <string name="hello_img_description">Hello image</string>
+    <string name="start_screen_name">Стартовый экран</string>
+    <string name="start_screen_text">Выберите задание для перехода на нужный экран.</string>
+    <string name="start_screen_option_121">Задача 1.2.1: Универсальная форма ввода</string>
+    <string name="start_screen_option_122">Задача 1.2.2: Бесконечный переход между экранами</string>
 </resources>
