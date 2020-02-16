@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class LessonTwoTaskTwoActivity extends AppCompatActivity {
+public class T_122 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson_two_task_two);
+        setContentView(R.layout.activity_122);
 
         TextView currentImageLink = findViewById(R.id.currentImageLink);
         currentImageLink.setText(createLink());
@@ -25,7 +25,7 @@ public class LessonTwoTaskTwoActivity extends AppCompatActivity {
         forwardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LessonTwoTaskTwoActivity.this, LessonTwoTaskTwoActivity.class);
+                Intent intent = new Intent(T_122.this, T_122.class);
                 startActivity(intent);
             }
         });
@@ -34,7 +34,7 @@ public class LessonTwoTaskTwoActivity extends AppCompatActivity {
         backwardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LessonTwoTaskTwoActivity.this.finish();
+                T_122.this.finish();
             }
         });
     }

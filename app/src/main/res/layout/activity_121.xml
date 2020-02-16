@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LessonTwoTaskOneActivity">
+    tools:context=".T_121">
 
     <EditText
         android:id="@+id/emailInput"
@@ -21,12 +21,14 @@
         app:layout_constraintTop_toBottomOf="@+id/nameInput" />
 
     <TextView
-        android:id="@+id/LessonTwoTaskOneName"
+        android:id="@+id/TaskName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#7E7D7D"
+        android:background="@color/colorPrimary"
+        android:padding="15dp"
         android:text="@string/start_screen_option_121"
         android:textAlignment="center"
+        android:textColor="@color/colorPlus"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +57,9 @@
         android:layout_marginStart="42dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="32dp"
+        android:background="@color/colorPrimary"
         android:text="@string/ok_button"
+        android:textColor="@color/colorPlus"
         app:layout_constraintEnd_toStartOf="@+id/resetButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailInput" />
@@ -65,7 +69,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="37dp"
+        android:background="@color/colorPrimary"
         android:text="@string/reset_button"
+        android:textColor="@color/colorPlus"
         app:layout_constraintBaseline_toBaselineOf="@+id/sendButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/sendButton" />
@@ -100,15 +106,17 @@
         android:id="@+id/nameInputLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
         android:text="@string/name_input_fiels"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="100dp" />
+        app:layout_constraintBottom_toTopOf="@+id/nameInput"
+        app:layout_constraintStart_toStartOf="@+id/nameInput" />
 
     <TextView
         android:id="@+id/emailInputLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
         android:text="@string/email_input_field"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="191dp" />
+        app:layout_constraintStart_toStartOf="@+id/nameInput"
+        app:layout_constraintTop_toBottomOf="@+id/nameInput" />
 </androidx.constraintlayout.widget.ConstraintLayout>

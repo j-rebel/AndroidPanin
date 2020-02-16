@@ -1,15 +1,87 @@
 <resources>
-    <string name="app_name">AndroidPanin</string>
-    <string name="start_screen_name">Стартовый экран</string>
-    <string name="start_screen_text">Выберите задание для перехода на нужный экран.</string>
-    <string name="start_screen_option_121">Задача 1.2.1: Универсальная форма ввода</string>
-    <string name="start_screen_option_122">Задача 1.2.2: Бесконечный переход между экранами</string>
-    <string name="name_input_fiels">Введите имя</string>
-    <string name="email_input_field">Введите e-mail</string>
+
+    <!--BEGIN Common strings-->
+    <string name="app_name">Домашние задания</string>
     <string name="ok_button">OK</string>
     <string name="reset_button">Сбросить</string>
+    <!--END Common strings-->
+
+    <!--BEGIN Screen names-->
+    <string name="start_screen_name">Стартовый экран</string>
+    <string name="start_screen_option_121">Задача 1.2.1: Универсальная форма ввода</string>
+    <string name="start_screen_option_122">Задача 1.2.2: Бесконечный переход между экранами</string>
+    <string name="start_screen_option_211">Задача 2.1.1: Взаимоисключающие CheckBox</string>
+    <string name="start_screen_option_212">Задача 2.1.2: Spinner «Страны-города-улицы»</string>
+    <string name="start_screen_option_213">Задача 2.1.3: CalendarView «Сроки задачи»</string>
+    <string name="start_screen_option_221">Задача 2.2.1: Записная книжка в SharedPreferences</string>
+    <string name="start_screen_option_222">Задача 2.2.2: AppBar приложения</string>
+    <!--END Screen names-->
+
+    <!--BEGIN Start screen strings-->
+    <string name="start_screen_text">Выберите задание для перехода на нужный экран.</string>
+    <string-array name="tasks">
+        <item>Выберите значение</item>
+        <item>Задача 1.2.1: Универсальная форма ввода</item>
+        <item>Задача 1.2.2: Бесконечный переход между экранами</item>
+        <item>Задача 2.1.1: Взаимоисключающие CheckBox</item>
+        <item>Задача 2.1.2: Spinner «Страны-города-улицы»</item>
+        <item>Задача 2.1.3: CalendarView «Сроки задачи»</item>
+    <!--<item>Задача 2.2.1: Записная книжка в SharedPreferences</item>
+        <item>Задача 2.2.2: AppBar приложения</item>
+        <item>tba</item>
+        <item>tba</item>
+        <item>tba</item>
+        <item>tba</item>
+        <item>tba</item>-->
+     </string-array>
+     <!--END Start screen strings-->
+
+    <!--BEGIN 121 strings-->
+    <string name="name_input_fiels">Введите имя</string>
+    <string name="email_input_field">Введите e-mail</string>
     <string name="subscribe_form_msg"> </string>
     <string name="subscribe_form_err"> </string>
+    <!--END 121 strings-->
+
+    <!--BEGIN 122 strings-->
     <string name="forward_button">Вперед</string>
     <string name="backward_button">Назад</string>
+    <!--END 122 strings-->
+
+    <!--BEGIN 211 strings-->
+    <string name="input_sum">Введите сумму</string>
+    <string name="input_pay_info">Введите информацию по оплате</string>
+    <string name="check_pay_card">С банковской карты</string>
+    <string name="check_pay_mobile">С мобильного телефона</string>
+    <string name="check_pay_cash">Наличными по адресу</string>
+    <!--END 211 strings-->
+
+    <!--BEGIN 212 strings-->
+    <string-array name="countries">
+        <item>Россия</item>
+        <item>Украина</item>
+        <item>Белоруссия</item>
+    </string-array>
+    <string-array name="r_cities">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Казань</item>
+    </string-array>
+    <string-array name="u_cities">
+        <item>Киев</item>
+        <item>Одесса</item>
+        <item>Харьков</item>
+    </string-array>
+    <string-array name="b_cities">
+        <item>Минск</item>
+        <item>Гомель</item>
+        <item>Торжок</item>
+    </string-array>
+    <!--END 212 strings-->
+
+    <!--BEGIN 213 strings-->
+    <string name="start_date_input">Дата-время старта задачи</string>
+    <string name="end_date_input">Дата-время окончания задачи</string>
+    <!--END 213 strings-->
+
 </resources>

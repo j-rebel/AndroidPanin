@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.androidpanin">
 
     <application
@@ -8,16 +9,71 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_book_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".LessonTwoTaskOneActivity"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+
+
+        <activity
+            android:name=".T_222"
             android:parentActivityName=".StartScreenActivity">
+
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".StartScreenActivity" />
         </activity>
-        <activity android:name=".LessonTwoTaskTwoActivity"
+        <activity
+            android:name=".T_221"
             android:parentActivityName=".StartScreenActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartScreenActivity" />
+        </activity>
+        <activity
+            android:name=".T_213"
+            android:parentActivityName=".StartScreenActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartScreenActivity" />
+        </activity>
+        <activity
+            android:name=".T_212"
+            android:parentActivityName=".StartScreenActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartScreenActivity" />
+        </activity>
+        <activity
+            android:name=".T_211"
+            android:parentActivityName=".StartScreenActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartScreenActivity" />
+        </activity>
+
+
+        <activity
+            android:name=".T_121"
+            android:parentActivityName=".StartScreenActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartScreenActivity" />
+        </activity>
+        <activity
+            android:name=".T_122"
+            android:parentActivityName=".StartScreenActivity">
+
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
