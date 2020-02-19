@@ -1,0 +1,48 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".StartScreenActivity">
+
+    <item
+        android:id="@+id/action_start"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_name"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_121"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_121"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_122"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_122"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_211"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_211"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_212"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_212"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_213"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_213"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_221"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_221"
+        app:showAsAction="never" />
+
+</menu>

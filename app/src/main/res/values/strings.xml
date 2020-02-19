@@ -26,9 +26,8 @@
         <item>Задача 2.1.1: Взаимоисключающие CheckBox</item>
         <item>Задача 2.1.2: Spinner «Страны-города-улицы»</item>
         <item>Задача 2.1.3: CalendarView «Сроки задачи»</item>
-    <!--<item>Задача 2.2.1: Записная книжка в SharedPreferences</item>
-        <item>Задача 2.2.2: AppBar приложения</item>
-        <item>tba</item>
+        <item>Задача 2.2.1: Записная книжка в SharedPreferences</item>
+    <!--<item>tba</item>
         <item>tba</item>
         <item>tba</item>
         <item>tba</item>
@@ -83,5 +82,9 @@
     <string name="start_date_input">Дата-время старта задачи</string>
     <string name="end_date_input">Дата-время окончания задачи</string>
     <!--END 213 strings-->
+
+    <!--BEGIN 221 strings-->
+    <string name="note_input">Введите текст заметки</string>
+    <!--END 221 strings-->
 
 </resources>

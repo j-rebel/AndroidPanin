@@ -9,20 +9,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_book_round"
         android:supportsRtl="true"
+        tools:ignore="GoogleAppIndexingWarning"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        >
 
 
-
-        <activity
-            android:name=".T_222"
-            android:parentActivityName=".StartScreenActivity">
-
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StartScreenActivity" />
-        </activity>
         <activity
             android:name=".T_221"
             android:parentActivityName=".StartScreenActivity">

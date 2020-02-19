@@ -6,33 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".T_122">
 
-    <TextView
-        android:id="@+id/TaskName"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:padding="15dp"
-        android:text="@string/start_screen_option_122"
-        android:textAlignment="center"
-        android:textColor="@color/colorPlus"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="56dp"
+        android:elevation="4dp"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:title="@string/start_screen_option_122" />
 
     <ImageView
         android:id="@+id/currentImage"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="@string/start_screen_option_122"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@color/colorPrimary" />
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
 
     <TextView
         android:id="@+id/currentImageLink"
@@ -53,9 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/colorPrimary"
         android:text="@string/backward_button"
-        android:textColor="@color/colorPlus"
         app:layout_constraintBaseline_toBaselineOf="@+id/forwardButton"
         app:layout_constraintEnd_toStartOf="@+id/forwardButton"
         app:layout_constraintStart_toStartOf="parent" />
@@ -66,9 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:background="@color/colorPrimary"
         android:text="@string/forward_button"
-        android:textColor="@color/colorPlus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/backwardButton"
         app:layout_constraintTop_toBottomOf="@+id/currentImageLink" />

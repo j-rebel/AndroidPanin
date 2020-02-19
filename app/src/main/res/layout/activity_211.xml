@@ -6,39 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".T_211">
 
-    <TextView
-        android:id="@+id/TaskName"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:padding="15dp"
-        android:text="@string/start_screen_option_211"
-        android:textAlignment="center"
-        android:textColor="@color/colorPlus"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="56dp"
+        android:elevation="4dp"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:title="@string/start_screen_option_211" />
 
     <EditText
         android:id="@+id/sumInput"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="99dp"
         android:autofillHints="@string/input_sum"
         android:ems="10"
         android:hint="@string/input_sum"
         android:inputType="number"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorLink="@color/colorPrimary"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TaskName"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
         tools:ignore="UnusedAttribute" />
 
     <EditText
@@ -52,8 +46,6 @@
         android:ems="10"
         android:hint="@string/input_pay_info"
         android:inputType="textPersonName"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorLink="@color/colorPrimary"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,8 +58,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/check_pay_card"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorLink="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="@+id/payInfoInput"
         app:layout_constraintTop_toBottomOf="@+id/payInfoInput" />
 
@@ -77,8 +67,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/check_pay_mobile"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorLink="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="@+id/payInfoInput"
         app:layout_constraintTop_toBottomOf="@+id/payCardChkBx" />
 
@@ -88,8 +76,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/check_pay_cash"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorLink="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="@+id/payInfoInput"
         app:layout_constraintTop_toBottomOf="@+id/payMobileChkBx" />
 
@@ -100,9 +86,7 @@
         android:layout_marginStart="154dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="169dp"
-        android:background="@color/colorPrimary"
         android:text="@string/ok_button"
-        android:textColor="@color/colorPlus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/payCashChkBx" />

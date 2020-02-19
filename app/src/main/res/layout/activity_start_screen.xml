@@ -6,35 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".StartScreenActivity">
 
-    <TextView
-        android:id="@+id/startScreenName"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:padding="15dp"
-        android:text="@string/start_screen_name"
-        android:textAlignment="center"
-        android:textColor="@color/colorPlus"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="56dp"
+        android:elevation="4dp"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:title="@string/start_screen_name" />
 
     <TextView
         android:id="@+id/startScreenText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="24dp"
         android:text="@string/start_screen_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startScreenName" />
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
 
-    <Spinner
+    <!--<Spinner
         android:id="@+id/taskSpinner"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -42,6 +37,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startScreenText" />
+        app:layout_constraintTop_toBottomOf="@+id/startScreenText" />-->
+
 </androidx.constraintlayout.widget.ConstraintLayout>
