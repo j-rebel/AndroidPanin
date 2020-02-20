@@ -6,17 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".T_121">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:elevation="4dp"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/start_screen_option_121" />
+    <include
+        android:id="@+id/included_bar"
+        layout="@layout/activity_toolbar" />
 
     <TextView
         android:id="@+id/nameInputLabel"
@@ -27,7 +19,7 @@
         android:text="@string/name_input_fiels"
         app:layout_constraintBottom_toTopOf="@+id/nameInput"
         app:layout_constraintStart_toStartOf="@+id/nameInput"
-        app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
+        app:layout_constraintTop_toBottomOf="@id/included_bar" />
 
     <EditText
         android:id="@+id/nameInput"
@@ -67,20 +59,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameInput"
         tools:ignore="UnusedAttribute" />
-
-<!--    <TextView
-        android:id="@+id/TaskName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:text="@string/start_screen_option_121"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />-->
 
     <Button
         android:id="@+id/sendButton"
@@ -122,7 +100,7 @@
         android:layout_marginStart="138dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="135dp"
-        android:text="@string/subscribe_form_msg"
+        android:text="@string/subscribe_form_msg_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

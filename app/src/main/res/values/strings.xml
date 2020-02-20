@@ -14,8 +14,17 @@
     <string name="start_screen_option_212">Задача 2.1.2: Spinner «Страны-города-улицы»</string>
     <string name="start_screen_option_213">Задача 2.1.3: CalendarView «Сроки задачи»</string>
     <string name="start_screen_option_221">Задача 2.2.1: Записная книжка в SharedPreferences</string>
-    <string name="start_screen_option_222">Задача 2.2.2: AppBar приложения</string>
     <!--END Screen names-->
+
+    <!--BEGIN Screen names for procced func-->
+    <string name="go_start">Переходим к стартовому экрану</string>
+    <string name="go_121">Переходим к 1.2.1</string>
+    <string name="go_122">Переходим к 1.2.2</string>
+    <string name="go_211">Переходим к 2.1.1</string>
+    <string name="go_212">Переходим к 2.1.2</string>
+    <string name="go_213">Переходим к 2.1.3</string>
+    <string name="go_221">Переходим к 2.2.1</string>
+    <!--END Screen names for procced func-->
 
     <!--BEGIN Start screen strings-->
     <string name="start_screen_text">Выберите задание для перехода на нужный экран.</string>
@@ -27,19 +36,15 @@
         <item>Задача 2.1.2: Spinner «Страны-города-улицы»</item>
         <item>Задача 2.1.3: CalendarView «Сроки задачи»</item>
         <item>Задача 2.2.1: Записная книжка в SharedPreferences</item>
-    <!--<item>tba</item>
-        <item>tba</item>
-        <item>tba</item>
-        <item>tba</item>
-        <item>tba</item>-->
-     </string-array>
-     <!--END Start screen strings-->
+    </string-array>
+    <!--END Start screen strings-->
 
     <!--BEGIN 121 strings-->
     <string name="name_input_fiels">Введите имя</string>
     <string name="email_input_field">Введите e-mail</string>
-    <string name="subscribe_form_msg"> </string>
-    <string name="subscribe_form_err"> </string>
+    <string name="subscribe_form_msg_name">Подписка на рассылку успешно оформлена для пользователя </string>
+    <string name="subscribe_form_msg_email"> на электронный адрес </string>
+    <string name="subscribe_form_err">Не заполнено одно из полей!</string>
     <!--END 121 strings-->
 
     <!--BEGIN 122 strings-->
@@ -53,6 +58,7 @@
     <string name="check_pay_card">С банковской карты</string>
     <string name="check_pay_mobile">С мобильного телефона</string>
     <string name="check_pay_cash">Наличными по адресу</string>
+    <string name="pay_msg">Произведен перевод на сумму: </string>
     <!--END 211 strings-->
 
     <!--BEGIN 212 strings-->
@@ -79,12 +85,16 @@
     <!--END 212 strings-->
 
     <!--BEGIN 213 strings-->
-    <string name="start_date_input">Дата-время старта задачи</string>
-    <string name="end_date_input">Дата-время окончания задачи</string>
+    <string name="start_date_input">Дата-время старта задачи: </string>
+    <string name="end_date_input">Дата-время окончания задачи: </string>
+    <string name="error">Ошибка!</string>
+    <string name="start">Старт: </string>
+    <string name="end">Окончание: </string>
     <!--END 213 strings-->
 
     <!--BEGIN 221 strings-->
     <string name="note_input">Введите текст заметки</string>
+    <string name="note_saved">Заметка сохранена</string>
     <!--END 221 strings-->
 
 </resources>

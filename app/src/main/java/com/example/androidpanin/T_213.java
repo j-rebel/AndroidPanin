@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import java.util.GregorianCalendar;
 
-public class T_213 extends AppCompatActivity {
+public class T_213 extends ToolbarActivity {
 
     private Button mChooseStartDate;
     private Button mChooseEndDate;
@@ -68,8 +68,8 @@ public class T_213 extends AppCompatActivity {
         mStartDateCalendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
-                mStartDateTxt = i+"-"+i1+"-"+i2;
-                mChooseStartDate.setText("Дата-время старта задачи: " + mStartDateTxt);
+                mStartDateTxt = getText(R.string.start_date_input).toString() + i+"-"+i1+"-"+i2;
+                mChooseStartDate.setText(mStartDateTxt);
                 GregorianCalendar gregorianCalendar = new GregorianCalendar();
                 gregorianCalendar.set(i, i1, i2);
                 mStartDate = gregorianCalendar.getTimeInMillis();
@@ -80,8 +80,8 @@ public class T_213 extends AppCompatActivity {
         mEndDateCalendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
-                mEndDateTxt = i+"-"+i1+"-"+i2;
-                mChooseEndDate.setText("Дата-время окончания задачи: " + mEndDateTxt);
+                mEndDateTxt = getText(R.string.end_date_input).toString() + i + "-" + i1 + "-" + i2;
+                mChooseEndDate.setText(mEndDateTxt);
                 GregorianCalendar gregorianCalendar = new GregorianCalendar();
                 gregorianCalendar.set(i, i1, i2);
                 mEndDate = gregorianCalendar.getTimeInMillis();
@@ -93,11 +93,18 @@ public class T_213 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (mStartDate > mEndDate){
-                    Toast.makeText(T_213.this, "Ошибка", Toast.LENGTH_LONG).show();
-                    mChooseStartDate.setText("Дата-время старта задачи:");
-                    mChooseEndDate.setText("Дата-время окончания задачи:");
+                    Toast.makeText(T_213.this,
+                            getText(R.string.error).toString(),
+                            Toast.LENGTH_LONG).show();
+                    mChooseStartDate.setText(getText(R.string.start_date_input).toString());
+                    mChooseEndDate.setText(getText(R.string.end_date_input).toString());
                 } else {
-                    Toast.makeText(T_213.this, "старт: " + mStartDateTxt + " окончаниe: " + mEndDateTxt, Toast.LENGTH_LONG).show();
+                    Toast.makeText(T_213.this,
+                            getText(R.string.start).toString() +
+                                    mStartDateTxt +
+                                    getText(R.string.end).toString() +
+                                    mEndDateTxt,
+                            Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -115,55 +122,5 @@ public class T_213 extends AppCompatActivity {
         mStartDateCalendar.setVisibility(View.GONE);
         mEndDateCalendar.setVisibility(View.GONE);
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        int id = item.getItemId();
-
-        switch (id) {
-            case R.id.action_start:
-                Toast.makeText(this, "Переходим к стартовому экрану", Toast.LENGTH_LONG).show();
-                proceedToTask(StartScreenActivity.class);
-                return true;
-            case R.id.action_121:
-                Toast.makeText(this, "Переходим к 1.2.1", Toast.LENGTH_LONG).show();
-                proceedToTask(T_121.class);
-                return true;
-            case R.id.action_122:
-                Toast.makeText(this, "Переходим к 1.2.2", Toast.LENGTH_LONG).show();
-                proceedToTask(T_122.class);
-                return true;
-            case R.id.action_211:
-                Toast.makeText(this, "Переходим к 2.1.1", Toast.LENGTH_LONG).show();
-                proceedToTask(T_211.class);
-                return true;
-            case R.id.action_212:
-                Toast.makeText(this, "Переходим к 2.1.2", Toast.LENGTH_LONG).show();
-                proceedToTask(T_212.class);
-                return true;
-            case R.id.action_213:
-                Toast.makeText(this, "Переходим к 2.1.3", Toast.LENGTH_LONG).show();
-                proceedToTask(T_213.class);
-                return true;
-            case R.id.action_221:
-                Toast.makeText(this, "Переходим к 2.2.1", Toast.LENGTH_LONG).show();
-                proceedToTask(T_221.class);
-                return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    public void proceedToTask(Class cls) {
-        Intent intent = new Intent(this, cls);
-        startActivity(intent);
     }
 }
