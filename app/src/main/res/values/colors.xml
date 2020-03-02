@@ -6,5 +6,7 @@
     <color name="colorText">#FFFFFF</color>
     <color name="colorBG">#FFFFFF</color>
     <color name="colorAccent">#88ffff</color>
-    <color name="colorPlus">#000000</color>
+    <color name="calcButtons">#D4D5D9</color>
+    <color name="calcControls">#F89212</color>
+    <color name="calcPanels">#000000</color>
 </resources>

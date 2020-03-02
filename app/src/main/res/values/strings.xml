@@ -14,6 +14,14 @@
     <string name="start_screen_option_212">Задача 2.1.2: Spinner «Страны-города-улицы»</string>
     <string name="start_screen_option_213">Задача 2.1.3: CalendarView «Сроки задачи»</string>
     <string name="start_screen_option_221">Задача 2.2.1: Записная книжка в SharedPreferences</string>
+    <string name="start_screen_option_311">Задача 3.1.1: Калькулятор</string>
+    <string name="start_screen_option_312">Задача 3.1.2: Действия калькулятора</string>
+    <string name="start_screen_option_321">Задача 3.2.1: </string>
+    <string name="start_screen_option_322">Задача 3.2.2: </string>
+    <string name="start_screen_option_331">Задача 3.3.1: </string>
+    <string name="start_screen_option_332">Задача 3.3.2: </string>
+    <string name="start_screen_option_341">Задача 3.4.1: </string>
+    <string name="start_screen_option_342">Задача 3.4.2: </string>
     <!--END Screen names-->
 
     <!--BEGIN Screen names for procced func-->
@@ -24,6 +32,14 @@
     <string name="go_212">Переходим к 2.1.2</string>
     <string name="go_213">Переходим к 2.1.3</string>
     <string name="go_221">Переходим к 2.2.1</string>
+    <string name="go_311">Переходим к 3.1.1</string>
+    <string name="go_312">Переходим к 3.1.2</string>
+    <string name="go_321">Переходим к 3.2.1</string>
+    <string name="go_322">Переходим к 3.2.2</string>
+    <string name="go_331">Переходим к 3.3.1</string>
+    <string name="go_332">Переходим к 3.3.2</string>
+    <string name="go_341">Переходим к 3.4.1</string>
+    <string name="go_342">Переходим к 3.4.2</string>
     <!--END Screen names for procced func-->
 
     <!--BEGIN Start screen strings-->
@@ -36,6 +52,14 @@
         <item>Задача 2.1.2: Spinner «Страны-города-улицы»</item>
         <item>Задача 2.1.3: CalendarView «Сроки задачи»</item>
         <item>Задача 2.2.1: Записная книжка в SharedPreferences</item>
+        <item>Задача 3.1.1: Калькулятор</item>
+        <item>Задача 3.1.2: Действия калькулятора</item>
+        <item>Задача 3.2.1: Калькулятор</item>
+        <item>Задача 3.2.2: Калькулятор</item>
+        <item>Задача 3.3.1: Калькулятор</item>
+        <item>Задача 3.3.2: Калькулятор</item>
+        <item>Задача 3.4.1: Калькулятор</item>
+        <item>Задача 3.4.2: Калькулятор</item>
     </string-array>
     <!--END Start screen strings-->
 
@@ -96,5 +120,61 @@
     <string name="note_input">Введите текст заметки</string>
     <string name="note_saved">Заметка сохранена</string>
     <!--END 221 strings-->
+
+    <!--BEGIN 311 strings-->
+    <string name="calc_one">1</string>
+    <string name="calc_two">2</string>
+    <string name="calc_three">3</string>
+    <string name="calc_four">4</string>
+    <string name="calc_five">5</string>
+    <string name="calc_six">6</string>
+    <string name="calc_seven">7</string>
+    <string name="calc_eight">8</string>
+    <string name="calc_nine">9</string>
+    <string name="calc_zero">0</string>
+    <string name="calc_dot">.</string>
+    <!--END 311 strings-->
+
+
+    <!--BEGIN 312 strings-->
+    <string name="calc_reset">С</string>
+    <string name="calc_plus_minus">+/-</string>
+    <string name="calc_percent">%</string>
+    <string name="calc_divide">/</string>
+    <string name="calc_multiply">*</string>
+    <string name="calc_minus">-</string>
+    <string name="calc_plus">+</string>
+    <string name="calc_equals">=</string>
+    <!--END 312 strings-->
+
+
+    <!--BEGIN 321 strings-->
+
+    <!--END 321 strings-->
+
+
+    <!--BEGIN 322 strings-->
+
+    <!--END 322 strings-->
+
+
+    <!--BEGIN 331 strings-->
+
+    <!--END 331 strings-->
+
+
+    <!--BEGIN 332 strings-->
+
+    <!--END 332 strings-->
+
+
+    <!--BEGIN 341 strings-->
+
+    <!--END 341 strings-->
+
+
+    <!--BEGIN 342 strings-->
+
+    <!--END 342 strings-->
 
 </resources>

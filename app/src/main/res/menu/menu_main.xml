@@ -45,4 +45,52 @@
         android:title="@string/start_screen_option_221"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_311"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_311"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_312"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_312"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_321"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_311"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_322"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_311"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_331"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_311"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_332"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_311"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_341"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_311"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_342"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_311"
+        app:showAsAction="never" />
+
 </menu>
