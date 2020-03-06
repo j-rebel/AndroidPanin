@@ -16,8 +16,8 @@
     <string name="start_screen_option_221">Задача 2.2.1: Записная книжка в SharedPreferences</string>
     <string name="start_screen_option_311">Задача 3.1.1: Калькулятор</string>
     <string name="start_screen_option_312">Задача 3.1.2: Действия калькулятора</string>
-    <string name="start_screen_option_321">Задача 3.2.1: </string>
-    <string name="start_screen_option_322">Задача 3.2.2: </string>
+    <string name="start_screen_option_321">Задача 3.2.1: Цепочка текста</string>
+    <string name="start_screen_option_322">Задача 3.2.2: Инженерный вид калькулятора</string>
     <string name="start_screen_option_331">Задача 3.3.1: </string>
     <string name="start_screen_option_332">Задача 3.3.2: </string>
     <string name="start_screen_option_341">Задача 3.4.1: </string>
@@ -54,12 +54,12 @@
         <item>Задача 2.2.1: Записная книжка в SharedPreferences</item>
         <item>Задача 3.1.1: Калькулятор</item>
         <item>Задача 3.1.2: Действия калькулятора</item>
-        <item>Задача 3.2.1: Калькулятор</item>
-        <item>Задача 3.2.2: Калькулятор</item>
-        <item>Задача 3.3.1: Калькулятор</item>
-        <item>Задача 3.3.2: Калькулятор</item>
-        <item>Задача 3.4.1: Калькулятор</item>
-        <item>Задача 3.4.2: Калькулятор</item>
+        <item>Задача 3.2.1: Цепочка текста</item>
+        <item>Задача 3.2.2: Инженерный вид калькулятора</item>
+        <item>Задача 3.3.1: </item>
+        <item>Задача 3.3.2: </item>
+        <item>Задача 3.4.1: </item>
+        <item>Задача 3.4.2: </item>
     </string-array>
     <!--END Start screen strings-->
 
@@ -157,7 +157,17 @@
 
 
     <!--BEGIN 322 strings-->
-
+    <string name="calc_mode_switch_button">Сменить режим</string>
+    <string name="calc_sin">sin</string>
+    <string name="calc_cos">cos</string>
+    <string name="calc_tan">tan</string>
+    <string name="calc_exp">EXP</string>
+    <string name="calc_PI">PI</string>
+    <string name="calc_ln">ln</string>
+    <string name="calc_log">log</string>
+    <string name="calc_square">SQR</string>
+    <string name="calc_pwr">PWR</string>
+    <string name="calc_factorial">x!</string>
     <!--END 322 strings-->
 
 
