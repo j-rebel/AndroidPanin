@@ -149,7 +149,10 @@
 
 
     <!--BEGIN 321 strings-->
-
+    <string name="letter_p">P</string>
+    <string name="letter_a">A</string>
+    <string name="letter_n">N</string>
+    <string name="letter_i">I</string>
     <!--END 321 strings-->
 
 
