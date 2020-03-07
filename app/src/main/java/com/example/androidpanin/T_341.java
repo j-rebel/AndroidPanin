@@ -3,6 +3,7 @@ package com.example.androidpanin;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +13,7 @@ import android.widget.Spinner;
 
 import java.util.Locale;
 
-public class T_341 extends ToolbarActivity {
+public class T_341 extends ToolbarActivity implements View.OnClickListener {
 
     private Button mOkBtn;
     private Spinner mLangSpinner;
@@ -21,36 +22,33 @@ public class T_341 extends ToolbarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_341);
         initViews();
+    }
 
+    @Override
+    public void onClick(View v) {
+
+        switch (mLangSpinner.getSelectedItemPosition()) {
+            case 0:
+                setLocaleAndColor("ru");
+                break;
+            case 1:
+                setLocaleAndColor("en");
+                break;
+        }
     }
 
     private void initViews() {
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-        mOkBtn = findViewById(R.id.okBtn);
-
         initLangSpinner();
         initColorSpinner();
 
-        mOkBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                switch (mLangSpinner.getSelectedItemPosition()) {
-                    case 0:
-                        setLocale("ru");
-                        break;
-                    case 1:
-                        setLocale("en");
-                        break;
-                }
-
-            }
-        });
-
+        mOkBtn = findViewById(R.id.okBtn);
+        mOkBtn.setOnClickListener(this);
 
     }
 
@@ -82,11 +80,14 @@ public class T_341 extends ToolbarActivity {
 
     }
 
-    private void setLocale(String localePrefix) {
+    private void setLocaleAndColor(String localePrefix) {
         Locale locale = new Locale(localePrefix);
         Configuration config = new Configuration();
         config.setLocale(locale);
         getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-        recreate();
+        Utils.changeToTheme(this, mColorSpinner.getSelectedItemPosition());
+        //recreate();
     }
+
+
 }

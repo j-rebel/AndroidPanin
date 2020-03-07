@@ -13,9 +13,11 @@
     <color name="colorPrimaryBlack">#2B2B2B</color>
     <color name="colorPrimaryDarkBlack">#181818</color>
     <color name="colorPrimaryLightBlack">#818181</color>
+
     <color name="colorPrimaryGreen">#17A238</color>
     <color name="colorPrimaryDarkGreen">#0B550E</color>
     <color name="colorPrimaryLightGreen">#87F085</color>
+
     <color name="colorPrimaryBlue">#0327CE</color>
     <color name="colorPrimaryDarkBlue">#000280</color>
     <color name="colorPrimaryLightBlue">#708BEB</color>
