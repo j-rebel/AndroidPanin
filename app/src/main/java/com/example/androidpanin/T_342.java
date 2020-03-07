@@ -22,6 +22,7 @@ public class T_342 extends ToolbarActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.onActivityCreateSetTheme(this);
         Utils.onActivityCreateSetMargins(this);
         setContentView(R.layout.activity_342);
         initViews();
