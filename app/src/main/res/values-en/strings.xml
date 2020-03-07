@@ -1,0 +1,190 @@
+<resources>
+
+    <!--BEGIN Common strings-->
+    <string name="app_name">Homework</string>
+    <string name="ok_button">OK</string>
+    <string name="reset_button">Reset</string>
+    <!--END Common strings-->
+
+    <!--BEGIN Screen names-->
+    <string name="start_screen_name">Start screen</string>
+    <string name="start_screen_option_121">Задача 1.2.1: Universal input form</string>
+    <string name="start_screen_option_122">Задача 1.2.2: Endless screen change</string>
+    <string name="start_screen_option_211">Задача 2.1.1: Mutually exclusive checkBoxes</string>
+    <string name="start_screen_option_212">Задача 2.1.2: Country-city-street Spinner</string>
+    <string name="start_screen_option_213">Задача 2.1.3: CalendarView</string>
+    <string name="start_screen_option_221">Задача 2.2.1: Notes in SharedPreferences</string>
+    <string name="start_screen_option_311">Задача 3.1.1: Calculator</string>
+    <string name="start_screen_option_312">Задача 3.1.2: Calculator actions</string>
+    <string name="start_screen_option_321">Задача 3.2.1: Text chain</string>
+    <string name="start_screen_option_322">Задача 3.2.2: Scientific calculator </string>
+    <string name="start_screen_option_331">Задача 3.3.1: Adaptive markup</string>
+    <string name="start_screen_option_332">Задача 3.3.2: Language choice</string>
+    <string name="start_screen_option_341">Задача 3.4.1: </string>
+    <string name="start_screen_option_342">Задача 3.4.2: </string>
+    <!--END Screen names-->
+
+    <!--BEGIN Screen names for procced func-->
+    <string name="go_start">Loading start scrren</string>
+    <string name="go_121">Loading 1.2.1</string>
+    <string name="go_122">Loading 1.2.2</string>
+    <string name="go_211">Loading 2.1.1</string>
+    <string name="go_212">Loading 2.1.2</string>
+    <string name="go_213">Loading 2.1.3</string>
+    <string name="go_221">Loading 2.2.1</string>
+    <string name="go_311">Loading 3.1.1</string>
+    <string name="go_312">Loading 3.1.2</string>
+    <string name="go_321">Loading 3.2.1</string>
+    <string name="go_322">Loading 3.2.2</string>
+    <string name="go_331">Loading 3.3.1</string>
+    <string name="go_332">Loading 3.3.2</string>
+    <string name="go_341">Loading 3.4.1</string>
+    <string name="go_342">Loading 3.4.2</string>
+    <!--END Screen names for procced func-->
+
+    <!--BEGIN Start screen strings-->
+    <string name="start_screen_text">Choose value to move to screen needed</string>
+    <string-array name="tasks">
+        <item>Choose value</item>
+        <item>Задача 1.2.1: Universal input form</item>
+        <item>Задача 1.2.2: Endless screen change</item>
+        <item>Задача 2.1.1: Mutually exclusive checkBoxes</item>
+        <item>Задача 2.1.2: Country-city-street Spinner</item>
+        <item>Задача 2.1.3: CalendarView</item>
+        <item>Задача 2.2.1: Notes in SharedPreferences</item>
+        <item>Задача 3.1.1: Calculator</item>
+        <item>Задача 3.1.2: Calculator actions</item>
+        <item>Задача 3.2.1: Text chain</item>
+        <item>Задача 3.2.2: Scientific calculator </item>
+        <item>Задача 3.3.1: Adaptive markup</item>
+        <item>Задача 3.3.2: Language choice</item>
+        <item>Задача 3.4.1: </item>
+        <item>Задача 3.4.2: </item>
+    </string-array>
+    <!--END Start screen strings-->
+
+    <!--BEGIN 121 strings-->
+    <string name="name_input_fiels">Enter name</string>
+    <string name="email_input_field">Enter e-mail</string>
+    <string name="subscribe_form_msg_name">Successfully subscribed user </string>
+    <string name="subscribe_form_msg_email"> with email </string>
+    <string name="subscribe_form_err">Missing data!</string>
+    <!--END 121 strings-->
+
+    <!--BEGIN 122 strings-->
+    <string name="forward_button">Next</string>
+    <string name="backward_button">Back</string>
+    <!--END 122 strings-->
+
+    <!--BEGIN 211 strings-->
+    <string name="input_sum">Enter sum</string>
+    <string name="input_pay_info">Enter payment info</string>
+    <string name="check_pay_card">Card</string>
+    <string name="check_pay_mobile">Mobile</string>
+    <string name="check_pay_cash">Cash</string>
+    <string name="pay_msg">Transaction for: </string>
+    <!--END 211 strings-->
+
+    <!--BEGIN 212 strings-->
+    <string-array name="countries">
+        <item>Russia</item>
+        <item>Ukraine</item>
+        <item>Belarus</item>
+    </string-array>
+    <string-array name="r_cities">
+        <item>Moscow</item>
+        <item>St. Petersburg</item>
+        <item>Kazan</item>
+    </string-array>
+    <string-array name="u_cities">
+        <item>Kiev</item>
+        <item>Odessa</item>
+        <item>Kharkiv</item>
+    </string-array>
+    <string-array name="b_cities">
+        <item>Minsk</item>
+        <item>Gomel</item>
+        <item>Tordjok</item>
+    </string-array>
+    <!--END 212 strings-->
+
+    <!--BEGIN 213 strings-->
+    <string name="start_date_input">Start date-time: </string>
+    <string name="end_date_input">End date-time: </string>
+    <string name="error">Error!</string>
+    <string name="start">Start: </string>
+    <string name="end">End: </string>
+    <!--END 213 strings-->
+
+    <!--BEGIN 221 strings-->
+    <string name="note_input">Enter note text</string>
+    <string name="note_saved">Note saved</string>
+    <!--END 221 strings-->
+
+    <!--BEGIN 311 strings-->
+    <string name="calc_one">1</string>
+    <string name="calc_two">2</string>
+    <string name="calc_three">3</string>
+    <string name="calc_four">4</string>
+    <string name="calc_five">5</string>
+    <string name="calc_six">6</string>
+    <string name="calc_seven">7</string>
+    <string name="calc_eight">8</string>
+    <string name="calc_nine">9</string>
+    <string name="calc_zero">0</string>
+    <string name="calc_dot">.</string>
+    <!--END 311 strings-->
+
+
+    <!--BEGIN 312 strings-->
+    <string name="calc_reset">С</string>
+    <string name="calc_plus_minus">+/-</string>
+    <string name="calc_percent">%</string>
+    <string name="calc_divide">/</string>
+    <string name="calc_multiply">*</string>
+    <string name="calc_minus">-</string>
+    <string name="calc_plus">+</string>
+    <string name="calc_equals">=</string>
+    <!--END 312 strings-->
+
+
+    <!--BEGIN 321 strings-->
+    <string name="letter_p">P</string>
+    <string name="letter_a">A</string>
+    <string name="letter_n">N</string>
+    <string name="letter_i">I</string>
+    <!--END 321 strings-->
+
+
+    <!--BEGIN 322 strings-->
+    <string name="calc_mode_switch_button">Change mode</string>
+    <string name="calc_sin">sin</string>
+    <string name="calc_cos">cos</string>
+    <string name="calc_tan">tan</string>
+    <string name="calc_exp">EXP</string>
+    <string name="calc_PI">PI</string>
+    <string name="calc_ln">ln</string>
+    <string name="calc_log">log</string>
+    <string name="calc_square">SQR</string>
+    <string name="calc_pwr">PWR</string>
+    <string name="calc_factorial">x!</string>
+    <!--END 322 strings-->
+
+    <!--BEGIN 332 strings-->
+    <string-array name="languages">
+        <item>Russian</item>
+        <item>English</item>
+    </string-array>
+    <!--END 332 strings-->
+
+
+    <!--BEGIN 341 strings-->
+
+    <!--END 341 strings-->
+
+
+    <!--BEGIN 342 strings-->
+
+    <!--END 342 strings-->
+
+</resources>
