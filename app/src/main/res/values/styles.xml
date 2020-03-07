@@ -28,4 +28,22 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDarkBlue</item>
         <item name="colorAccent">@color/colorPrimaryLightBlue</item>
     </style>
+
+    <style name="MarginsSmall" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="MarginsMedium" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_margin">15dp</item>
+    </style>
+
+    <style name="MarginsLarge" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_margin">25dp</item>
+    </style>
+
+
+
 </resources>
