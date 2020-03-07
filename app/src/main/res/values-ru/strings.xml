@@ -20,8 +20,8 @@
     <string name="start_screen_option_322">Задача 3.2.2: Инженерный вид калькулятора</string>
     <string name="start_screen_option_331">Задача 3.3.1: Адаптивная горизонтально-вертикальная верстка</string>
     <string name="start_screen_option_332">Задача 3.3.2: Страница переключения языка</string>
-    <string name="start_screen_option_341">Задача 3.4.1: </string>
-    <string name="start_screen_option_342">Задача 3.4.2: </string>
+    <string name="start_screen_option_341">Задача 3.4.1: Переключение цветов в приложении</string>
+    <string name="start_screen_option_342">Задача 3.4.2: Переключение отступов в приложении</string>
     <!--END Screen names-->
 
     <!--BEGIN Screen names for procced func-->
@@ -58,8 +58,8 @@
         <item>Задача 3.2.2: Инженерный вид калькулятора</item>
         <item>Задача 3.3.1: Адаптивная горизонтально-вертикальная верстка</item>
         <item>Задача 3.3.2: Страница переключения языка.</item>
-        <item>Задача 3.4.1: </item>
-        <item>Задача 3.4.2: </item>
+        <item>Задача 3.4.1: Переключение цветов в приложении</item>
+        <item>Задача 3.4.2: Переключение отступов в приложении</item>
     </string-array>
     <!--END Start screen strings-->
 
@@ -179,12 +179,20 @@
 
 
     <!--BEGIN 341 strings-->
-
+    <string-array name="colors">
+        <item>Черный</item>
+        <item>Синий</item>
+        <item>Зеленый</item>
+    </string-array>
     <!--END 341 strings-->
 
 
     <!--BEGIN 342 strings-->
-
+    <string-array name="margins">
+        <item>Маленький</item>
+        <item>Средний</item>
+        <item>Большой</item>
+    </string-array>
     <!--END 342 strings-->
 
 </resources>

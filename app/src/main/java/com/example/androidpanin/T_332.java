@@ -14,8 +14,8 @@ import java.util.Locale;
 
 public class T_332 extends ToolbarActivity {
 
-    Button mOkBtn;
-    Spinner mLangSpinner;
+    private Button mOkBtn;
+    private Spinner mLangSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,39 +29,28 @@ public class T_332 extends ToolbarActivity {
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-        mLangSpinner = findViewById(R.id.langSpinner);
         initLangSpinner();
 
         mOkBtn = findViewById(R.id.okBtn);
-
         mOkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 switch (mLangSpinner.getSelectedItemPosition()) {
                     case 0:
-                        Locale localeRU = new Locale("ru");
-                        Configuration configRU = new Configuration();
-                        configRU.setLocale(localeRU);
-                        getResources().updateConfiguration(configRU, getBaseContext().getResources().getDisplayMetrics());
-                        recreate();
+                        setLocale("ru");
                         break;
                     case 1:
-                        Locale localeEN = new Locale("en");
-                        Configuration configEN = new Configuration();
-                        configEN.setLocale(localeEN);
-                        getResources().updateConfiguration(configEN, getBaseContext().getResources().getDisplayMetrics());
-                        recreate();
+                        setLocale("en");
                         break;
                 }
 
             }
         });
-
-
     }
 
     private void initLangSpinner() {
+        mLangSpinner = findViewById(R.id.langSpinner);
 
         ArrayAdapter<CharSequence> adapterLang = ArrayAdapter.createFromResource(
                 this,
@@ -70,6 +59,13 @@ public class T_332 extends ToolbarActivity {
         );
         adapterLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mLangSpinner.setAdapter(adapterLang);
+    }
 
+    private void setLocale(String localePrefix) {
+        Locale locale = new Locale(localePrefix);
+        Configuration config = new Configuration();
+        config.setLocale(locale);
+        getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        recreate();
     }
 }
