@@ -22,6 +22,10 @@
     <string name="start_screen_option_332">Задача 3.3.2: Страница переключения языка</string>
     <string name="start_screen_option_341">Задача 3.4.1: Переключение цветов в приложении</string>
     <string name="start_screen_option_342">Задача 3.4.2: Переключение отступов в приложении</string>
+    <string name="start_screen_option_411">Задача 4.1.1: Отображение списка</string>
+    <string name="start_screen_option_412">Задача 4.1.2: Взаимодействие со списком</string>
+    <string name="start_screen_option_421">Задача 4.2.1: Список с custom элементами</string>
+    <string name="start_screen_option_422">Задача 4.2.2: Перехват событий на элементах</string>
     <!--END Screen names-->
 
     <!--BEGIN Screen names for procced func-->
@@ -40,6 +44,10 @@
     <string name="go_332">Переходим к 3.3.2</string>
     <string name="go_341">Переходим к 3.4.1</string>
     <string name="go_342">Переходим к 3.4.2</string>
+    <string name="go_411">Переходим к 4.1.1</string>
+    <string name="go_412">Переходим к 4.1.2</string>
+    <string name="go_421">Переходим к 4.2.1</string>
+    <string name="go_422">Переходим к 4.2.2</string>
     <!--END Screen names for procced func-->
 
     <!--BEGIN Start screen strings-->
@@ -60,6 +68,10 @@
         <item>Задача 3.3.2: Страница переключения языка.</item>
         <item>Задача 3.4.1: Переключение цветов в приложении</item>
         <item>Задача 3.4.2: Переключение отступов в приложении</item>
+        <item>Задача 4.1.1: Отображение списка</item>
+        <item>Задача 4.1.2: Взаимодействие со списком</item>
+        <item>Задача 4.2.1: Список с custom элементами</item>
+        <item>Задача 4.2.2: Перехват событий на элементах</item>
     </string-array>
     <!--END Start screen strings-->
 

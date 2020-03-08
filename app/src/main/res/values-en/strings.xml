@@ -8,20 +8,24 @@
 
     <!--BEGIN Screen names-->
     <string name="start_screen_name">Start screen</string>
-    <string name="start_screen_option_121">Задача 1.2.1: Universal input form</string>
-    <string name="start_screen_option_122">Задача 1.2.2: Endless screen change</string>
-    <string name="start_screen_option_211">Задача 2.1.1: Mutually exclusive checkBoxes</string>
-    <string name="start_screen_option_212">Задача 2.1.2: Country-city-street Spinner</string>
-    <string name="start_screen_option_213">Задача 2.1.3: CalendarView</string>
-    <string name="start_screen_option_221">Задача 2.2.1: Notes in SharedPreferences</string>
-    <string name="start_screen_option_311">Задача 3.1.1: Calculator</string>
-    <string name="start_screen_option_312">Задача 3.1.2: Calculator actions</string>
-    <string name="start_screen_option_321">Задача 3.2.1: Text chain</string>
-    <string name="start_screen_option_322">Задача 3.2.2: Scientific calculator </string>
-    <string name="start_screen_option_331">Задача 3.3.1: Adaptive markup</string>
-    <string name="start_screen_option_332">Задача 3.3.2: Language choice</string>
-    <string name="start_screen_option_341">Задача 3.4.1: Color choice</string>
-    <string name="start_screen_option_342">Задача 3.4.2: Margin choice</string>
+    <string name="start_screen_option_121">Task 1.2.1: Universal input form</string>
+    <string name="start_screen_option_122">Task 1.2.2: Endless screen change</string>
+    <string name="start_screen_option_211">Task 2.1.1: Mutually exclusive checkBoxes</string>
+    <string name="start_screen_option_212">Task 2.1.2: Country-city-street Spinner</string>
+    <string name="start_screen_option_213">Task 2.1.3: CalendarView</string>
+    <string name="start_screen_option_221">Task 2.2.1: Notes in SharedPreferences</string>
+    <string name="start_screen_option_311">Task 3.1.1: Calculator</string>
+    <string name="start_screen_option_312">Task 3.1.2: Calculator actions</string>
+    <string name="start_screen_option_321">Task 3.2.1: Text chain</string>
+    <string name="start_screen_option_322">Task 3.2.2: Scientific calculator </string>
+    <string name="start_screen_option_331">Task 3.3.1: Adaptive markup</string>
+    <string name="start_screen_option_332">Task 3.3.2: Language choice</string>
+    <string name="start_screen_option_341">Task 3.4.1: Color choice</string>
+    <string name="start_screen_option_342">Task 3.4.2: Margin choice</string>
+    <string name="start_screen_option_411">Task 4.1.1: List display</string>
+    <string name="start_screen_option_412">Task 4.1.2: List interactions</string>
+    <string name="start_screen_option_421">Task 4.2.1: Custom List</string>
+    <string name="start_screen_option_422">Task 4.2.2: List events</string>
     <!--END Screen names-->
 
     <!--BEGIN Screen names for procced func-->
@@ -40,28 +44,37 @@
     <string name="go_332">Loading 3.3.2</string>
     <string name="go_341">Loading 3.4.1</string>
     <string name="go_342">Loading 3.4.2</string>
+    <string name="go_411">Loading 4.1.1</string>
+    <string name="go_412">Loading 4.1.2</string>
+    <string name="go_421">Loading 4.2.1</string>
+    <string name="go_422">Loading 4.2.2</string>
     <!--END Screen names for procced func-->
 
     <!--BEGIN Start screen strings-->
     <string name="start_screen_text">Choose value to move to screen needed</string>
     <string-array name="tasks">
         <item>Choose value</item>
-        <item>Задача 1.2.1: Universal input form</item>
-        <item>Задача 1.2.2: Endless screen change</item>
-        <item>Задача 2.1.1: Mutually exclusive checkBoxes</item>
-        <item>Задача 2.1.2: Country-city-street Spinner</item>
-        <item>Задача 2.1.3: CalendarView</item>
-        <item>Задача 2.2.1: Notes in SharedPreferences</item>
-        <item>Задача 3.1.1: Calculator</item>
-        <item>Задача 3.1.2: Calculator actions</item>
-        <item>Задача 3.2.1: Text chain</item>
-        <item>Задача 3.2.2: Scientific calculator </item>
-        <item>Задача 3.3.1: Adaptive markup</item>
-        <item>Задача 3.3.2: Language choice</item>
-        <item>Задача 3.4.1: Color choice</item>
-        <item>Задача 3.4.2: Margin choice</item>
+        <item>Task 1.2.1: Universal input form</item>
+        <item>Task 1.2.2: Endless screen change</item>
+        <item>Task 2.1.1: Mutually exclusive checkBoxes</item>
+        <item>Task 2.1.2: Country-city-street Spinner</item>
+        <item>Task 2.1.3: CalendarView</item>
+        <item>Task 2.2.1: Notes in SharedPreferences</item>
+        <item>Task 3.1.1: Calculator</item>
+        <item>Task 3.1.2: Calculator actions</item>
+        <item>Task 3.2.1: Text chain</item>
+        <item>Task 3.2.2: Scientific calculator </item>
+        <item>Task 3.3.1: Adaptive markup</item>
+        <item>Task 3.3.2: Language choice</item>
+        <item>Task 3.4.1: Color choice</item>
+        <item>Task 3.4.2: Margin choice</item>
+        <item>Task 4.1.1: List display</item>
+        <item>Task 4.1.2: List interactions</item>
+        <item>Task 4.2.1: Custom List</item>
+        <item>Task 4.2.2: List events</item>
     </string-array>
     <!--END Start screen strings-->
+
 
     <!--BEGIN 121 strings-->
     <string name="name_input_fiels">Enter name</string>

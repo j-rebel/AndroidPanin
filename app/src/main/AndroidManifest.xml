@@ -12,6 +12,39 @@
         android:theme="@style/AppThemeBlack"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".T_422"
+            android:parentActivityName=".StartScreenActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartScreenActivity" />
+        </activity>        <activity
+        android:name=".T_421"
+        android:parentActivityName=".StartScreenActivity">
+
+        <!-- The meta-data tag is required if you support API level 15 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".StartScreenActivity" />
+    </activity>        <activity
+        android:name=".T_412"
+        android:parentActivityName=".StartScreenActivity">
+
+        <!-- The meta-data tag is required if you support API level 15 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".StartScreenActivity" />
+    </activity>        <activity
+        android:name=".T_411"
+        android:parentActivityName=".StartScreenActivity">
+
+        <!-- The meta-data tag is required if you support API level 15 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".StartScreenActivity" />
+    </activity>
+        <activity
             android:name=".T_342"
             android:parentActivityName=".StartScreenActivity">
 

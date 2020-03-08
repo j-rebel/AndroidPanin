@@ -93,4 +93,28 @@
         android:title="@string/start_screen_option_342"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_411"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_411"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_412"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_412"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_421"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_421"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_422"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_422"
+        app:showAsAction="never" />
+
 </menu>

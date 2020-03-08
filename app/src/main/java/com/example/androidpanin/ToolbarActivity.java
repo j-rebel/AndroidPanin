@@ -91,6 +91,22 @@ public class ToolbarActivity extends AppCompatActivity {
                 Toast.makeText(this, getText(R.string.go_342).toString(), Toast.LENGTH_LONG).show();
                 proceedToTask(T_342.class);
                 return true;
+            case R.id.action_411:
+                Toast.makeText(this, getText(R.string.go_411).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(T_411.class);
+                return true;
+            case R.id.action_412:
+                Toast.makeText(this, getText(R.string.go_412).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(T_412.class);
+                return true;
+            case R.id.action_421:
+                Toast.makeText(this, getText(R.string.go_421).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(T_421.class);
+                return true;
+            case R.id.action_422:
+                Toast.makeText(this, getText(R.string.go_422).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(T_422.class);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
