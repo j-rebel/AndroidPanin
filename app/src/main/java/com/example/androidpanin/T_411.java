@@ -7,6 +7,16 @@ import android.os.Bundle;
 
 public class T_411 extends ToolbarActivity {
 
+    static {
+
+        String[] data = {
+                "Брюс Эккель \"Философия Java\" ",
+                "Чарльз Петцольд \"Код\" ",
+                ""
+        };
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
