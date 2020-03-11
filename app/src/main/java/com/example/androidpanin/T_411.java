@@ -15,9 +15,6 @@ import java.util.Map;
 
 public class T_411 extends ToolbarActivity {
 
-    List<Map<String, String>> values = new ArrayList<>();
-    BaseAdapter listContentAdapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,18 +29,15 @@ public class T_411 extends ToolbarActivity {
 
         ListView list = findViewById(R.id.list);
 
-        values = prepareContent();
+        List<Map<String, String>> values = prepareContent();
 
         String[] from = {"Заголовок", "Подзаголовок"};
         int[] to = {R.id.bookName, R.id.bookDescription};
-        listContentAdapter = createAdapter(values, from, to);
+
+        BaseAdapter listContentAdapter = new SimpleAdapter(this, values, R.layout.two_fields_list_item, from, to);
 
         list.setAdapter(listContentAdapter);
 
-    }
-
-    private BaseAdapter createAdapter(List<Map<String, String>> values, String[] from, int[] to) {
-        return new SimpleAdapter(this, values, R.layout.two_fields_list_item, from, to);
     }
 
     private List<Map<String, String>> prepareContent() {
@@ -51,10 +45,10 @@ public class T_411 extends ToolbarActivity {
 
         List<Map<String, String>> list = new ArrayList<>();
 
-        for (int i = 0; i < strings.length; i++) {
+        for (String string : strings) {
             Map<String, String> map = new HashMap<>();
-            map.put("Заголовок", strings[i]);
-            map.put("Подзаголовок", String.valueOf(strings[i].length()));
+            map.put("Заголовок", string);
+            map.put("Подзаголовок", String.valueOf(string.length()));
             list.add(map);
         }
 

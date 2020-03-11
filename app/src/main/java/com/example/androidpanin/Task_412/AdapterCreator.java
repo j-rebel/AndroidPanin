@@ -1,4 +1,4 @@
-package com.example.androidpanin;
+package com.example.androidpanin.Task_412;
 
 import android.content.Context;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import com.example.androidpanin.R;
 
 import java.util.ArrayList;
 import java.util.List;

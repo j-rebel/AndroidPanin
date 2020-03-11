@@ -1,4 +1,4 @@
-package com.example.androidpanin;
+package com.example.androidpanin.Task_412;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -18,9 +18,7 @@ public class SharedDataCreator {
 
         if (this.sp.getBoolean("firstRun", true)) {
             alertFirstRun(context);
-            SharedPreferences.Editor editor = this.sp.edit();
-            editor.putString(LARGE_TEXT, resString).apply();
-            editor.putBoolean("firstRun", false).apply();
+            sp.edit().putString(LARGE_TEXT, resString).putBoolean("firstRun", false).apply();
         }
     }
 

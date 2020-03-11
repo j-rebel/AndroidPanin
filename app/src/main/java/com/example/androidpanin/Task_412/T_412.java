@@ -1,24 +1,13 @@
-package com.example.androidpanin;
+package com.example.androidpanin.Task_412;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.example.androidpanin.R;
+import com.example.androidpanin.ToolbarActivity;
+import com.example.androidpanin.Utils;
 
 public class T_412 extends ToolbarActivity {
 
@@ -32,11 +21,8 @@ public class T_412 extends ToolbarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         Utils.onActivityCreateSetTheme(this);
-
         setContentView(R.layout.activity_412);
-
         initView();
     }
 

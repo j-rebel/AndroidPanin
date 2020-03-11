@@ -28,7 +28,7 @@
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".StartScreenActivity" />
     </activity>        <activity
-        android:name=".T_412"
+        android:name=".Task_412.T_412"
         android:parentActivityName=".StartScreenActivity">
 
         <!-- The meta-data tag is required if you support API level 15 and lower -->
