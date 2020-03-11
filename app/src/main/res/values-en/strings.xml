@@ -211,6 +211,11 @@
     <!--BEGIN 411 strings-->
     <string name="book_name_label">Book title</string>
     <string name="book_description_label">Book description</string>
+    <string name="large_text">
+        First Line
+        \nSecond line
+        \nThird line
+        \nFourth Line</string>
     <!--END 411 strings-->
 
 

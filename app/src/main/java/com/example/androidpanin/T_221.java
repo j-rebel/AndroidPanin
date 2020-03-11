@@ -32,9 +32,12 @@ public class T_221 extends ToolbarActivity {
     private void initViews() {
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+
         mNoteInput = findViewById(R.id.noteInput);
         mOkButton = findViewById(R.id.okButton);
+
         myNoteSharedPref = getSharedPreferences("MyNote", MODE_PRIVATE);
+
         mOkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
