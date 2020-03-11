@@ -1,8 +1,6 @@
 package com.example.androidpanin;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;

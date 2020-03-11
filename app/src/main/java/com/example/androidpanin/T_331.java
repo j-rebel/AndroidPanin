@@ -1,13 +1,9 @@
 package com.example.androidpanin;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class T_331 extends ToolbarActivity implements View.OnClickListener {
