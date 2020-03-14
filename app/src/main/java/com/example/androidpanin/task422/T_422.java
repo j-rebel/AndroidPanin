@@ -2,20 +2,15 @@ package com.example.androidpanin.task422;
 
 import androidx.appcompat.widget.Toolbar;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.androidpanin.R;
-import com.example.androidpanin.StartScreenActivity;
 import com.example.androidpanin.ToolbarActivity;
 import com.example.androidpanin.Utils;
-import com.example.androidpanin.task421.T_421;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class T_422 extends ToolbarActivity {
