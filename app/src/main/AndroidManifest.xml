@@ -10,9 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_book_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeBlack"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true">
         <activity
-            android:name=".T_422"
+            android:name=".task422.T_422"
             android:parentActivityName=".StartScreenActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -20,7 +22,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".StartScreenActivity" />
         </activity>        <activity
-        android:name=".T_421"
+        android:name=".task421.T_421"
         android:parentActivityName=".StartScreenActivity">
 
         <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -28,7 +30,7 @@
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".StartScreenActivity" />
     </activity>        <activity
-        android:name=".Task_412.T_412"
+        android:name=".task412.T_412"
         android:parentActivityName=".StartScreenActivity">
 
         <!-- The meta-data tag is required if you support API level 15 and lower -->

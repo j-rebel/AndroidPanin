@@ -9,7 +9,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.androidpanin.Task_412.T_412;
+import com.example.androidpanin.task412.T_412;
+import com.example.androidpanin.task421.T_421;
+import com.example.androidpanin.task422.T_422;
 
 public class ToolbarActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.androidpanin.Task_412;
+package com.example.androidpanin.task412;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;

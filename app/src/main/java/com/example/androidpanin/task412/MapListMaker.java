@@ -1,4 +1,4 @@
-package com.example.androidpanin.Task_412;
+package com.example.androidpanin.task412;
 
 import java.util.ArrayList;
 import java.util.HashMap;
