@@ -26,6 +26,15 @@
     <string name="start_screen_option_412">Задача 4.1.2: Взаимодействие со списком</string>
     <string name="start_screen_option_421">Задача 4.2.1: Список с custom элементами</string>
     <string name="start_screen_option_422">Задача 4.2.2: Перехват событий на элементах</string>
+    <string name="start_screen_option_511">Задача 5.1.1: Сохранение текстового файла</string>
+    <string name="start_screen_option_512">Задача 5.1.2: Выбор картинки для элемента из внешнего файла</string>
+    <string name="start_screen_option_521">Задача 5.2.1: Сохранение/восстановление текста во внутренний файл</string>
+    <string name="start_screen_option_522">Задача 5.2.2: Экспорт внутреннего файла во внешний и обратно.</string>
+    <string name="start_screen_option_611">Задача 6.1.1: Логирование жизненного цикла активити</string>
+    <string name="start_screen_option_612">Задача 6.1.2: Восстановление данных активити</string>
+    <string name="start_screen_option_711">Задача 7.1.1: Синхронизация данных</string>
+    <string name="start_screen_option_721">Задача 7.2.1: Открыть адрес на GoogleMap</string>
+    <string name="start_screen_option_722">Задача 7.2.2: Позвонить по телефону/отправить СМС</string>
     <!--END Screen names-->
 
     <!--BEGIN Screen names for procced func-->
@@ -48,6 +57,15 @@
     <string name="go_412">Переходим к 4.1.2</string>
     <string name="go_421">Переходим к 4.2.1</string>
     <string name="go_422">Переходим к 4.2.2</string>
+    <string name="go_511">Переходим к 5.1.1</string>
+    <string name="go_512">Переходим к 5.1.2</string>
+    <string name="go_521">Переходим к 5.2.1</string>
+    <string name="go_522">Переходим к 5.2.2</string>
+    <string name="go_611">Переходим к 6.1.1</string>
+    <string name="go_612">Переходим к 6.1.2</string>
+    <string name="go_711">Переходим к 7.1.1</string>
+    <string name="go_721">Переходим к 7.2.1</string>
+    <string name="go_722">Переходим к 7.2.2</string>
     <!--END Screen names for procced func-->
 
     <!--BEGIN Start screen strings-->
@@ -72,6 +90,15 @@
         <item>Задача 4.1.2: Взаимодействие со списком</item>
         <item>Задача 4.2.1: Список с custom элементами</item>
         <item>Задача 4.2.2: Перехват событий на элементах</item>
+        <item>Задача 5.1.1: Сохранение текстового файла</item>
+        <item>Задача 5.1.2: Выбор картинки для элемента из внешнего файла</item>
+        <item>Задача 5.2.1: Сохранение/восстановление текста во внутренний файл</item>
+        <item>Задача 5.2.2: Экспорт внутреннего файла во внешний и обратно.</item>
+        <item>Задача 6.1.1: Логирование жизненного цикла активити</item>
+        <item>Задача 6.1.2: Восстановление данных активити</item>
+        <item>Задача 7.1.1: Синхронизация данных</item>
+        <item>Задача 7.2.1: Открыть адрес на GoogleMap</item>
+        <item>Задача 7.2.2: Позвонить по телефону/отправить СМС</item>
     </string-array>
     <!--END Start screen strings-->
 
@@ -218,15 +245,47 @@
         \nFourth Line</string>
     <!--END 411 strings-->
 
-
-    <!--BEGIN 412 strings-->
-
-    <!--END 412 strings-->
-
-
     <!--BEGIN 421 strings-->
-
+    <string name="task_title_placeholder">Задача %d</string>
     <!--END 421 strings-->
+
+
+    <!--BEGIN 511 strings-->
+    <string-array name="classes">
+        <item>121</item>
+        <item>122</item>
+        <item>211</item>
+        <item>212</item>
+        <item>213</item>
+        <item>221</item>
+        <item>311</item>
+        <item>312</item>
+        <item>321</item>
+        <item>322</item>
+        <item>331</item>
+        <item>332</item>
+        <item>341</item>
+        <item>342</item>
+        <item>411</item>
+        <item>412</item>
+        <item>421</item>
+        <item>422</item>
+        <item>511</item>
+        <item>512</item>
+        <item>521</item>
+        <item>522</item>
+        <item>611</item>
+        <item>612</item>
+        <item>711</item>
+        <item>721</item>
+        <item>722</item>
+    </string-array>
+    <!--END 511 strings-->
+
+
+    <!--BEGIN 512 strings-->
+    <string name="change_bg">Сменить фон</string>
+    <!--END 512 strings-->
 
 
     <!--BEGIN 422 strings-->

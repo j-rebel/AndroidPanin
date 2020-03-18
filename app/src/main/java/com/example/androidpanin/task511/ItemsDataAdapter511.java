@@ -1,4 +1,4 @@
-package com.example.androidpanin.task422;
+package com.example.androidpanin.task511;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,18 +11,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpanin.R;
-import com.example.androidpanin.StartScreenActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemsDataAdapter422 extends BaseAdapter {
+public class ItemsDataAdapter511 extends BaseAdapter {
 
-    private List<ItemData422> items;
+    private List<ItemData511> items;
     private LayoutInflater inflater;
     private Context context;
 
-    ItemsDataAdapter422(Context context, List<ItemData422> items) {
+    ItemsDataAdapter511(Context context, List<ItemData511> items) {
         if (items == null) {
             this.items = new ArrayList<>();
         } else {
@@ -32,7 +31,7 @@ public class ItemsDataAdapter422 extends BaseAdapter {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    void addItem(ItemData422 item) {
+    void addItem(ItemData511 item) {
         this.items.add(item);
         notifyDataSetChanged();
     }
@@ -48,7 +47,7 @@ public class ItemsDataAdapter422 extends BaseAdapter {
     }
 
     @Override
-    public ItemData422 getItem(int position) {
+    public ItemData511 getItem(int position) {
         if (position < items.size()) {
             return items.get(position);
         } else {
@@ -68,7 +67,7 @@ public class ItemsDataAdapter422 extends BaseAdapter {
             view = inflater.inflate(R.layout.list_item_buttons, parent, false);
         }
 
-        final ItemData422 itemData = items.get(position);
+        final ItemData511 itemData = items.get(position);
 
         ImageView image = view.findViewById(R.id.itemImage);
         TextView header = view.findViewById(R.id.itemHeader);
@@ -76,12 +75,13 @@ public class ItemsDataAdapter422 extends BaseAdapter {
         Button okBtn = view.findViewById(R.id.okBtn);
         Button resetBtn = view.findViewById(R.id.resetBtn);
 
-        image.setImageDrawable(itemData.getImage());
+        image.setImageBitmap(itemData.getImage());
         header.setText(itemData.getHeader());
         description.setText(itemData.getDescription());
 
         final Class<?> cls = itemData.getActivityClass();
-         okBtn.setOnClickListener(new View.OnClickListener() {
+
+        okBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     changeActivity(cls);
@@ -99,7 +99,11 @@ public class ItemsDataAdapter422 extends BaseAdapter {
     }
 
     private void changeActivity(Class cls) {
-        Intent intent = new Intent(context, cls);
-        context.startActivity(intent);
+            Intent intent = new Intent(context, cls);
+            context.startActivity(intent);
+    }
+
+    public List<ItemData511> getItems() {
+        return items;
     }
 }

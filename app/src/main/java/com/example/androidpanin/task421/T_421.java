@@ -48,7 +48,7 @@ public class T_421 extends ToolbarActivity {
         });
     }
 
-    public void initAdapter(){
+    public void initAdapter() {
         ListView listView = findViewById(R.id.customList);
 
         adapter = new ItemsDataAdapter421(this, null);
@@ -58,22 +58,22 @@ public class T_421 extends ToolbarActivity {
     }
 
     private void addData() {
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_121),"Задача 1", getString(R.string.start_screen_option_121), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_122),"Задача 2", getString(R.string.start_screen_option_122), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_211),"Задача 3", getString(R.string.start_screen_option_211), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_212),"Задача 4", getString(R.string.start_screen_option_212), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_213),"Задача 5", getString(R.string.start_screen_option_213), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_221),"Задача 6", getString(R.string.start_screen_option_221), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_311),"Задача 7", getString(R.string.start_screen_option_311), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_312),"Задача 8", getString(R.string.start_screen_option_312), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_321),"Задача 9", getString(R.string.start_screen_option_321), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_322),"Задача 10", getString(R.string.start_screen_option_322), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_331),"Задача 11", getString(R.string.start_screen_option_331), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_332),"Задача 12", getString(R.string.start_screen_option_332), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_341),"Задача 13", getString(R.string.start_screen_option_341), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_342),"Задача 14", getString(R.string.start_screen_option_342), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_411),"Задача 15", getString(R.string.start_screen_option_411), false));
-        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_412),"Задача 16", getString(R.string.start_screen_option_412), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_121), getString(R.string.task_title_placeholder, 1), getString(R.string.start_screen_option_121), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_122), getString(R.string.task_title_placeholder, 2), getString(R.string.start_screen_option_122), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_211), getString(R.string.task_title_placeholder, 3), getString(R.string.start_screen_option_211), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_212), getString(R.string.task_title_placeholder, 4), getString(R.string.start_screen_option_212), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_213), getString(R.string.task_title_placeholder, 5), getString(R.string.start_screen_option_213), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_221), getString(R.string.task_title_placeholder, 6), getString(R.string.start_screen_option_221), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_311), getString(R.string.task_title_placeholder, 7), getString(R.string.start_screen_option_311), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_312), getString(R.string.task_title_placeholder, 8), getString(R.string.start_screen_option_312), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_321), getString(R.string.task_title_placeholder, 9), getString(R.string.start_screen_option_321), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_322), getString(R.string.task_title_placeholder, 10), getString(R.string.start_screen_option_322), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_331), getString(R.string.task_title_placeholder, 11), getString(R.string.start_screen_option_331), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_332), getString(R.string.task_title_placeholder, 12), getString(R.string.start_screen_option_332), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_341), getString(R.string.task_title_placeholder, 13), getString(R.string.start_screen_option_341), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_342), getString(R.string.task_title_placeholder, 14), getString(R.string.start_screen_option_342), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_411), getString(R.string.task_title_placeholder, 15), getString(R.string.start_screen_option_411), false));
+        adapter.addItem(new ItemData421(getDrawable(R.drawable.screen_412), getString(R.string.task_title_placeholder, 16), getString(R.string.start_screen_option_412), false));
     }
 
 }

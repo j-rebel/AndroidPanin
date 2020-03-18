@@ -117,4 +117,58 @@
         android:title="@string/start_screen_option_422"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_511"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_511"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_512"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_512"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_521"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_521"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_522"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_522"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_611"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_611"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_612"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_612"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_711"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_711"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_721"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_721"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_722"
+        android:orderInCategory="100"
+        android:title="@string/start_screen_option_722"
+        app:showAsAction="never" />
+
 </menu>

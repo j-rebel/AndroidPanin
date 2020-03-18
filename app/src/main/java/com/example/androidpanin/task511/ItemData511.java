@@ -1,31 +1,32 @@
-package com.example.androidpanin.task422;
+package com.example.androidpanin.task511;
 
-import android.app.Activity;
-import android.graphics.drawable.Drawable;
+import android.graphics.Bitmap;
 
-public class ItemData422 {
+public class ItemData511 {
 
-    private Drawable image;
+    private Bitmap image;
     private String header;
     private String description;
-    private boolean checked;
     private String className;
+    private String classId;
     private Class activityClass;
 
-    public ItemData422(Drawable image, String header, String description, boolean checked, String className) {
+    public ItemData511(Bitmap image, String header, String description, String className) {
         this.image = image;
         this.header = header;
         this.description = description;
-        this.checked = checked;
         this.className = className;
+        this.classId = className.substring(className.indexOf("T_") + 2);
         try {
             this.activityClass = Class.forName(className);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+            this.className = "511";
+            this.activityClass = T_511.class;
         }
     }
 
-    public Drawable getImage() {
+    public Bitmap getImage() {
         return image;
     }
 
@@ -37,19 +38,15 @@ public class ItemData422 {
         return description;
     }
 
-    public boolean isChecked() {
-        return checked;
-    }
-
-    public void setChecked(boolean checked) {
-        this.checked = checked;
-    }
-
     public String getClassName() {
         return className;
     }
 
     public Class getActivityClass() {
         return activityClass;
+    }
+
+    public String getClassId() {
+        return classId;
     }
 }

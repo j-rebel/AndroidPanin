@@ -26,6 +26,15 @@
     <string name="start_screen_option_412">Task 4.1.2: List interactions</string>
     <string name="start_screen_option_421">Task 4.2.1: Custom List</string>
     <string name="start_screen_option_422">Task 4.2.2: List events</string>
+    <string name="start_screen_option_511">Task 5.1.1: Saving text file</string>
+    <string name="start_screen_option_512">Task 5.1.2: Choosing image for a view</string>
+    <string name="start_screen_option_521">Task 5.2.1: Saving files to an outer source</string>
+    <string name="start_screen_option_522">Task 5.2.2: Export from inner to outer source</string>
+    <string name="start_screen_option_611">Task 6.1.1: Activity logging</string>
+    <string name="start_screen_option_612">Task 6.1.2: Retrieving activity state</string>
+    <string name="start_screen_option_711">Task 7.1.1: Data synchronization</string>
+    <string name="start_screen_option_721">Task 7.2.1: GoogleMap</string>
+    <string name="start_screen_option_722">Task 7.2.2: SMS/Calls</string>
     <!--END Screen names-->
 
     <!--BEGIN Screen names for procced func-->
@@ -48,6 +57,15 @@
     <string name="go_412">Loading 4.1.2</string>
     <string name="go_421">Loading 4.2.1</string>
     <string name="go_422">Loading 4.2.2</string>
+    <string name="go_511">Loading 5.1.1</string>
+    <string name="go_512">Loading 5.1.2</string>
+    <string name="go_521">Loading 5.2.1</string>
+    <string name="go_522">Loading 5.2.2</string>
+    <string name="go_611">Loading 6.1.1</string>
+    <string name="go_612">Loading 6.1.2</string>
+    <string name="go_711">Loading 7.1.1</string>
+    <string name="go_721">Loading 7.2.1</string>
+    <string name="go_722">Loading 7.2.2</string>
     <!--END Screen names for procced func-->
 
     <!--BEGIN Start screen strings-->
@@ -72,6 +90,15 @@
         <item>Task 4.1.2: List interactions</item>
         <item>Task 4.2.1: Custom List</item>
         <item>Task 4.2.2: List events</item>
+        <item>Task 5.1.1: Saving text file</item>
+        <item>Task 5.1.2: Choosing image for a view</item>
+        <item>Task 5.2.1: Saving files to an outer source</item>
+        <item>Task 5.2.2: Export from inner to outer source</item>
+        <item>Task 6.1.1: Activity logging</item>
+        <item>Task 6.1.2: Retrieving activity state</item>
+        <item>Task 7.1.1: Data synchronization</item>
+        <item>Task 7.2.1: GoogleMap</item>
+        <item>Task 7.2.2: SMS/Calls</item>
     </string-array>
     <!--END Start screen strings-->
 
@@ -218,15 +245,46 @@
         \nFourth Line</string>
     <!--END 411 strings-->
 
-
-    <!--BEGIN 412 strings-->
-
-    <!--END 412 strings-->
-
-
     <!--BEGIN 421 strings-->
-
+    <string name="task_title_placeholder">Task %d</string>
     <!--END 421 strings-->
+
+    <!--BEGIN 511 strings-->
+    <string-array name="classes">
+        <item>121</item>
+        <item>122</item>
+        <item>211</item>
+        <item>212</item>
+        <item>213</item>
+        <item>221</item>
+        <item>311</item>
+        <item>312</item>
+        <item>321</item>
+        <item>322</item>
+        <item>331</item>
+        <item>332</item>
+        <item>341</item>
+        <item>342</item>
+        <item>411</item>
+        <item>412</item>
+        <item>421</item>
+        <item>422</item>
+        <item>511</item>
+        <item>512</item>
+        <item>521</item>
+        <item>522</item>
+        <item>611</item>
+        <item>612</item>
+        <item>711</item>
+        <item>721</item>
+        <item>722</item>
+    </string-array>
+    <!--END 511 strings-->
+
+
+    <!--BEGIN 512 strings-->
+    <string name="change_bg">Change background</string>
+    <!--END 512 strings-->
 
 
     <!--BEGIN 422 strings-->

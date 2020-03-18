@@ -12,6 +12,8 @@ import android.widget.Toast;
 import com.example.androidpanin.task412.T_412;
 import com.example.androidpanin.task421.T_421;
 import com.example.androidpanin.task422.T_422;
+import com.example.androidpanin.task511.T_511;
+import com.example.androidpanin.task512.T_512;
 
 public class ToolbarActivity extends AppCompatActivity {
 
@@ -110,6 +112,42 @@ public class ToolbarActivity extends AppCompatActivity {
             case R.id.action_422:
                 Toast.makeText(this, getText(R.string.go_422).toString(), Toast.LENGTH_LONG).show();
                 proceedToTask(T_422.class);
+                return true;
+            case R.id.action_511:
+                Toast.makeText(this, getText(R.string.go_511).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(T_511.class);
+                return true;
+            case R.id.action_512:
+                Toast.makeText(this, getText(R.string.go_512).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(T_512.class);
+                return true;
+            case R.id.action_521:
+                Toast.makeText(this, getText(R.string.go_521).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(StartScreenActivity.class);
+                return true;
+            case R.id.action_522:
+                Toast.makeText(this, getText(R.string.go_522).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(StartScreenActivity.class);
+                return true;
+            case R.id.action_611:
+                Toast.makeText(this, getText(R.string.go_611).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(StartScreenActivity.class);
+                return true;
+            case R.id.action_612:
+                Toast.makeText(this, getText(R.string.go_612).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(StartScreenActivity.class);
+                return true;
+            case R.id.action_711:
+                Toast.makeText(this, getText(R.string.go_711).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(StartScreenActivity.class);
+                return true;
+            case R.id.action_721:
+                Toast.makeText(this, getText(R.string.go_721).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(StartScreenActivity.class);
+                return true;
+            case R.id.action_722:
+                Toast.makeText(this, getText(R.string.go_722).toString(), Toast.LENGTH_LONG).show();
+                proceedToTask(StartScreenActivity.class);
                 return true;
         }
 

@@ -5,6 +5,7 @@
     android:id="@+id/itemLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?android:attr/colorAccent"
     android:descendantFocusability="blocksDescendants"
     android:orientation="vertical"
     android:paddingTop="10dp"
@@ -39,7 +40,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/itemImage"
         app:layout_constraintTop_toTopOf="@+id/itemImage"
-        tools:text="Задание 1" />
+        tools:text="Задание 1"
+        />
 
     <TextView
         android:id="@+id/itemDescription"
@@ -61,23 +63,24 @@
 
     <Button
         android:id="@+id/okBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:background="@android:color/holo_green_dark"
-        android:text="@string/ok_button"
+        android:background="@android:drawable/ic_media_play"
+        android:backgroundTint="?attr/colorPrimaryDark"
+        app:layout_constraintEnd_toStartOf="@+id/resetBtn"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toEndOf="@+id/itemImage"
         app:layout_constraintTop_toBottomOf="@+id/itemDescription" />
 
     <Button
         android:id="@+id/resetBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:background="@android:color/holo_red_dark"
-        android:text="@string/reset_button"
+        android:background="@android:drawable/ic_delete"
+        android:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/okBtn"
         app:layout_constraintTop_toBottomOf="@+id/itemDescription" />
 
