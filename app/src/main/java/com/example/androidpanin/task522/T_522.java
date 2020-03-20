@@ -1,6 +1,5 @@
 package com.example.androidpanin.task522;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -20,17 +19,13 @@ import android.widget.Toast;
 import com.example.androidpanin.R;
 import com.example.androidpanin.ToolbarActivity;
 import com.example.androidpanin.Utils;
-import com.example.androidpanin.task511.ItemData511;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.util.ArrayList;
 
 public class T_522 extends ToolbarActivity {
 
