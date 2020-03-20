@@ -297,4 +297,8 @@
     <!--BEGIN 522 strings-->
     <string name="save_external">Save external</string>
     <!--END 522 strings-->
+
+    <!--BEGIN 611 strings-->
+    <string name="log_field">Activity lifecycle:</string>
+    <!--END 611 strings-->
 </resources>
