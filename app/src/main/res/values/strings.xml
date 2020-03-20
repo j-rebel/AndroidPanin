@@ -287,7 +287,15 @@
     <!--END 512 strings-->
 
 
-    <!--BEGIN 422 strings-->
+    <!--BEGIN 521 strings-->
+    <string name="password_input_hint">Введите пароль</string>
+    <string name="login_input_hint">Введите логин</string>
+    <string name="login">Войти</string>
+    <string name="registration">Регистрация</string>
+    <!--END 521 strings-->
 
-    <!--END 422 strings-->
+
+    <!--BEGIN 522 strings-->
+    <string name="save_external">Хранить во внешнем хранилише</string>
+    <!--END 522 strings-->
 </resources>

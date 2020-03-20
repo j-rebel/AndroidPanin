@@ -16,7 +16,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeBlack"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".task512.BackgroundSettings"></activity>
+        <activity android:name=".task522.T_522"
+            android:parentActivityName=".StartScreenActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartScreenActivity" />
+
+        </activity>
+        <activity android:name=".task521.T_521"
+            android:parentActivityName=".StartScreenActivity">
+
+        <!-- The meta-data tag is required if you support API level 15 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".StartScreenActivity" />
+        </activity>
+        <activity android:name=".task512.BackgroundSettings" />
         <activity
             android:name=".task512.T_512"
             android:parentActivityName=".StartScreenActivity">

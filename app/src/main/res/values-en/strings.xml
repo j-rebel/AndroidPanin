@@ -287,7 +287,14 @@
     <!--END 512 strings-->
 
 
-    <!--BEGIN 422 strings-->
+    <!--BEGIN 521 strings-->
+    <string name="password_input_hint">Enter password</string>
+    <string name="login_input_hint">Enter login</string>
+    <string name="login">Login</string>
+    <string name="registration">Registration</string>
+    <!--END 521 strings-->
 
-    <!--END 422 strings-->
+    <!--BEGIN 522 strings-->
+    <string name="save_external">Save external</string>
+    <!--END 522 strings-->
 </resources>

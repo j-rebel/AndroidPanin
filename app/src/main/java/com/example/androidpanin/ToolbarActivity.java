@@ -14,6 +14,8 @@ import com.example.androidpanin.task421.T_421;
 import com.example.androidpanin.task422.T_422;
 import com.example.androidpanin.task511.T_511;
 import com.example.androidpanin.task512.T_512;
+import com.example.androidpanin.task521.T_521;
+import com.example.androidpanin.task522.T_522;
 
 public class ToolbarActivity extends AppCompatActivity {
 
@@ -123,11 +125,11 @@ public class ToolbarActivity extends AppCompatActivity {
                 return true;
             case R.id.action_521:
                 Toast.makeText(this, getText(R.string.go_521).toString(), Toast.LENGTH_LONG).show();
-                proceedToTask(StartScreenActivity.class);
+                proceedToTask(T_521.class);
                 return true;
             case R.id.action_522:
                 Toast.makeText(this, getText(R.string.go_522).toString(), Toast.LENGTH_LONG).show();
-                proceedToTask(StartScreenActivity.class);
+                proceedToTask(T_522.class);
                 return true;
             case R.id.action_611:
                 Toast.makeText(this, getText(R.string.go_611).toString(), Toast.LENGTH_LONG).show();
