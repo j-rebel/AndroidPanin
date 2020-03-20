@@ -6,4 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".task611.T_611">
 
+    <include
+        android:id="@+id/included_bar"
+        layout="@layout/activity_toolbar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

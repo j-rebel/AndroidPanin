@@ -16,6 +16,11 @@ import com.example.androidpanin.task511.T_511;
 import com.example.androidpanin.task512.T_512;
 import com.example.androidpanin.task521.T_521;
 import com.example.androidpanin.task522.T_522;
+import com.example.androidpanin.task611.T_611;
+import com.example.androidpanin.task612.T_612;
+import com.example.androidpanin.task711.T_711;
+import com.example.androidpanin.task721.T_721;
+import com.example.androidpanin.task722.T_722;
 
 public class ToolbarActivity extends AppCompatActivity {
 
@@ -133,23 +138,23 @@ public class ToolbarActivity extends AppCompatActivity {
                 return true;
             case R.id.action_611:
                 Toast.makeText(this, getText(R.string.go_611).toString(), Toast.LENGTH_LONG).show();
-                proceedToTask(StartScreenActivity.class);
+                proceedToTask(T_611.class);
                 return true;
             case R.id.action_612:
                 Toast.makeText(this, getText(R.string.go_612).toString(), Toast.LENGTH_LONG).show();
-                proceedToTask(StartScreenActivity.class);
+                proceedToTask(T_612.class);
                 return true;
             case R.id.action_711:
                 Toast.makeText(this, getText(R.string.go_711).toString(), Toast.LENGTH_LONG).show();
-                proceedToTask(StartScreenActivity.class);
+                proceedToTask(T_711.class);
                 return true;
             case R.id.action_721:
                 Toast.makeText(this, getText(R.string.go_721).toString(), Toast.LENGTH_LONG).show();
-                proceedToTask(StartScreenActivity.class);
+                proceedToTask(T_721.class);
                 return true;
             case R.id.action_722:
                 Toast.makeText(this, getText(R.string.go_722).toString(), Toast.LENGTH_LONG).show();
-                proceedToTask(StartScreenActivity.class);
+                proceedToTask(T_722.class);
                 return true;
         }
 
