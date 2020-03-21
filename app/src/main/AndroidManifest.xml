@@ -16,7 +16,47 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeBlack"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".task722.T_722"
+        <activity android:name=".task711.EveningActivity"
+            android:parentActivityName=".task711.T_711">
+            <intent-filter>
+                <action android:name="android.intent.action.SYNC"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="evening"/>
+            </intent-filter>
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".task711.T_711" />
+        </activity>
+        <activity android:name=".task711.AfternoonActivity"
+            android:parentActivityName=".task711.T_711">
+            <intent-filter>
+                <action android:name="android.intent.action.SYNC"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="afternoon"/>
+            </intent-filter>
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".task711.T_711" />
+        </activity>
+        <activity android:name=".task711.MorningActivity"
+            android:parentActivityName=".task711.T_711">
+            <intent-filter>
+                <action android:name="android.intent.action.SYNC"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="morning"/>
+            </intent-filter>
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".task711.T_711" />
+        </activity>
+        <activity
+            android:name=".task722.T_722"
             android:parentActivityName=".StartScreenActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -24,7 +64,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".StartScreenActivity" />
         </activity>
-        <activity android:name=".task721.T_721"
+        <activity
+            android:name=".task721.T_721"
             android:parentActivityName=".StartScreenActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -32,7 +73,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".StartScreenActivity" />
         </activity>
-        <activity android:name=".task711.T_711"
+        <activity
+            android:name=".task711.T_711"
             android:parentActivityName=".StartScreenActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -40,7 +82,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".StartScreenActivity" />
         </activity>
-        <activity android:name=".task612.T_612"
+        <activity
+            android:name=".task612.T_612"
             android:parentActivityName=".StartScreenActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -48,7 +91,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".StartScreenActivity" />
         </activity>
-        <activity android:name=".task611.T_611"
+        <activity
+            android:name=".task611.T_611"
             android:parentActivityName=".StartScreenActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->

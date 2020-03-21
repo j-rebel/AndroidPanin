@@ -302,4 +302,13 @@
     <!--BEGIN 611 strings-->
     <string name="log_field">Activity lifecycle:</string>
     <!--END 611 strings-->
+
+    <!--BEGIN 711 strings-->
+    <string name="main_activity_title">T_711 Activity</string>
+    <string name="mornin_activity_title">Morning Activity</string>
+    <string name="afternoon_activity_title">Agfternoon Activity</string>
+    <string name="evening_activity_title">Evening Activity</string>
+    <string name="sync_button_text">Sync</string>
+    <string name="run_button_text">Run</string>
+    <!--END 711 strings-->
 </resources>
