@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.androidpanin.R;
 import com.example.androidpanin.ToolbarActivity;
@@ -22,7 +23,12 @@ public class T_711 extends ToolbarActivity {
     private TextView mCurrentTimeView;
     private Button mSyncBtn;
     private Date date = new Date() ;
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm") ;
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+
+    private final static int MORNING_ID = 1;
+    private final static int AFTERNOON_ID = 2;
+    private final static int EVENING_ID = 3;
+    private final static int ERROR_CODE = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +51,20 @@ public class T_711 extends ToolbarActivity {
             @Override
             public void onClick(View v) {
                 String strUri = "";
-                if(isMorning(date)) {
-                    strUri = "http://morning";
-                } else if(isAfternoon(date)) {
-                    strUri = "http://afternoon";
-                } else if(isEvening(date)) {
-                    strUri = "http://evening";
+
+                switch (getTimeId(date)) {
+                    case MORNING_ID:
+                        strUri = "http://morning";
+                        break;
+                    case AFTERNOON_ID:
+                        strUri = "http://afternoon";
+                        break;
+                    case EVENING_ID:
+                        strUri = "http://evening";
+                        break;
+                    case ERROR_CODE:
+                        showErrorMsg();
+                        break;
                 }
 
                 Intent intent = new Intent(Intent.ACTION_SYNC);
@@ -60,43 +74,25 @@ public class T_711 extends ToolbarActivity {
         });
     }
 
-    public boolean isMorning(Date date) {
+    public int getTimeId(Date date) {
         try {
             if (dateFormat.parse(dateFormat.format(date)).after(dateFormat.parse("05:59")) &&
                     dateFormat.parse(dateFormat.format(date)).before(dateFormat.parse("14:00"))) {
-                return true;
-            }
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
-
-    public boolean isAfternoon(Date date) {
-        try {
-            if (dateFormat.parse(dateFormat.format(date)).after(dateFormat.parse("13:59")) &&
+                return MORNING_ID;
+            } else if (dateFormat.parse(dateFormat.format(date)).after(dateFormat.parse("13:59")) &&
                     dateFormat.parse(dateFormat.format(date)).before(dateFormat.parse("15:00"))) {
-                return true;
-            }
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
-
-    public boolean isEvening(Date date) {
-        try {
-            if (dateFormat.parse(dateFormat.format(date)).after(dateFormat.parse("14:59")) ||
+                return AFTERNOON_ID;
+            } else if (dateFormat.parse(dateFormat.format(date)).after(dateFormat.parse("14:59")) ||
                     dateFormat.parse(dateFormat.format(date)).before(dateFormat.parse("06:00"))) {
-                return true;
+                return EVENING_ID;
             }
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return false;
+        return ERROR_CODE;
     }
 
-
-
-
+    public void showErrorMsg() {
+        Toast.makeText(this, "Something went wrong!", Toast.LENGTH_LONG).show();
+    }
 }
