@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.androidpanin.R;
 import com.example.androidpanin.ToolbarActivity;
 import com.example.androidpanin.Utils;
@@ -139,7 +140,11 @@ public class T_512 extends ToolbarActivity implements View.OnClickListener {
         if (isExternalStorageWritable()) {
             File file = new File(DOWNLOADS_PATH, IMAGE_NAME);
             Bitmap b = BitmapFactory.decodeFile(file.getAbsolutePath());
-            view.setImageBitmap(b);
+            //view.setImageBitmap(b);
+            Glide.with(this)
+                    .asBitmap()
+                    .load(b)
+                    .into(view);
             Toast.makeText(this, file.getAbsolutePath(), Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(this, getString(R.string.bg_not_found), Toast.LENGTH_LONG).show();
