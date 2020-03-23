@@ -58,8 +58,6 @@ public class T_521 extends ToolbarActivity {
                 saveData();
             }
         });
-
-
     }
 
     public void checkData() {
@@ -67,23 +65,21 @@ public class T_521 extends ToolbarActivity {
         String password = mPswrdInput.getText().toString();
         String checkLogin = "";
         String checkPswrd = "";
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(new File(getFilesDir(), FILE_NAME)));
+        try(BufferedReader reader = new BufferedReader(new FileReader(new File(getFilesDir(), FILE_NAME)))) {
             checkLogin = reader.readLine();
             checkPswrd = reader.readLine();
-            reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         if(!checkLogin.equals("") || !checkPswrd.equals("")) {
             if (login.equals(checkLogin) && password.equals(checkPswrd)) {
-                Toast.makeText(this, "Correct input", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.correct_input_msg), Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "Incorrect input", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.incorrect_input_msg), Toast.LENGTH_LONG).show();
             }
         } else {
-            Toast.makeText(this, "No data found", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.no_data_msg), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -93,16 +89,14 @@ public class T_521 extends ToolbarActivity {
         if (!login.equals("") && !password.equals("")) {
             String data = login + "\n" + password;
 
-            try {
-                BufferedWriter writer = new BufferedWriter(new FileWriter(new File(getFilesDir(), FILE_NAME)));
+            try(BufferedWriter writer = new BufferedWriter(new FileWriter(new File(getFilesDir(), FILE_NAME)))) {
                 writer.write(data);
-                writer.close();
-                Toast.makeText(this, "Data saved", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.data_saved_msg), Toast.LENGTH_LONG).show();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         } else {
-            Toast.makeText(this, "Empty input", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.empty_input_msg), Toast.LENGTH_LONG).show();
         }
     }
 }

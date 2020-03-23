@@ -300,6 +300,11 @@
     <string name="login_input_hint">Введите логин</string>
     <string name="login">Войти</string>
     <string name="registration">Регистрация</string>
+    <string name="correct_input_msg">Корректный ввод</string>
+    <string name="incorrect_input_msg">Некорректный ввод</string>
+    <string name="no_data_msg">Данные не найдены</string>
+    <string name="data_saved_msg">Данные сохранены</string>
+    <string name="empty_input_msg">Пустой ввод</string>
     <!--END 521 strings-->
 
     <!--BEGIN 522 strings-->

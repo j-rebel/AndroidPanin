@@ -299,6 +299,11 @@
     <string name="login_input_hint">Enter login</string>
     <string name="login">Login</string>
     <string name="registration">Registration</string>
+    <string name="correct_input_msg">Correct input</string>
+    <string name="incorrect_input_msg">Incorrect input</string>
+    <string name="no_data_msg">No data found</string>
+    <string name="data_saved_msg">Data saved</string>
+    <string name="empty_input_msg">Empty input</string>
     <!--END 521 strings-->
 
     <!--BEGIN 522 strings-->

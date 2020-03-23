@@ -1,5 +1,6 @@
 package com.example.androidpanin.task522;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -53,6 +54,7 @@ public class T_522 extends ToolbarActivity {
                 Manifest.permission.READ_EXTERNAL_STORAGE);
         permissionWrStatus = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
         initView();
     }
 
@@ -68,8 +70,9 @@ public class T_522 extends ToolbarActivity {
 
         mSaveModeCheckbox = findViewById(R.id.saveModeCheckbox);
 
+
         sp = getSharedPreferences("SAVE_MODE", MODE_PRIVATE);
-        getSaveMode();
+        mSaveModeCheckbox.setChecked(getSaveMode());
 
         mSaveModeCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -79,13 +82,13 @@ public class T_522 extends ToolbarActivity {
                     mLoginBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            checkDataTxt();
+                            requestReadPerm();
                         }
                     });
                     mRegBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            saveDataTxt();
+                            requestWritePerm();
                         }
                     });
                 } else {
@@ -111,23 +114,21 @@ public class T_522 extends ToolbarActivity {
         String password = mPswrdInput.getText().toString();
         String checkLogin = "";
         String checkPswrd = "";
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(new File(getFilesDir(), FILE_NAME)));
+        try(BufferedReader reader = new BufferedReader(new FileReader(new File(getFilesDir(), FILE_NAME)))) {
             checkLogin = reader.readLine();
             checkPswrd = reader.readLine();
-            reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         if(!checkLogin.equals("") || !checkPswrd.equals("")) {
             if (login.equals(checkLogin) && password.equals(checkPswrd)) {
-                Toast.makeText(this, "Correct input", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.correct_input_msg), Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "Incorrect input", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.incorrect_input_msg), Toast.LENGTH_LONG).show();
             }
         } else {
-            Toast.makeText(this, "No data found", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.no_data_msg), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -137,16 +138,15 @@ public class T_522 extends ToolbarActivity {
         if (!login.equals("") && !password.equals("")) {
             String data = login + "\n" + password;
 
-            try {
-                BufferedWriter writer = new BufferedWriter(new FileWriter(new File(getFilesDir(), FILE_NAME)));
+            try(BufferedWriter writer = new BufferedWriter(new FileWriter(new File(getFilesDir(), FILE_NAME)))) {
                 writer.write(data);
                 writer.close();
-                Toast.makeText(this, "Data saved", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.data_saved_msg), Toast.LENGTH_LONG).show();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         } else {
-            Toast.makeText(this, "Empty input", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.empty_input_msg), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -157,62 +157,49 @@ public class T_522 extends ToolbarActivity {
     }
 
     private void saveDataTxt() {
-        if (permissionWrStatus == PackageManager.PERMISSION_GRANTED & isExternalStorageWritable()) {
             String login = mLoginInput.getText().toString();
             String password = mPswrdInput.getText().toString();
-            if (!login.equals("") && !password.equals("")) {
+            if (!login.equals("") && !password.equals("") && isExternalStorageWritable()) {
                 String data = login + "\n" + password;
 
-                try {
-                    BufferedWriter writer = new BufferedWriter(new FileWriter(new File(DOWNLOADS_PATH, FILE_NAME)));
+                try(BufferedWriter writer = new BufferedWriter(new FileWriter(new File(DOWNLOADS_PATH, FILE_NAME)))) {
                     writer.write(data);
                     writer.close();
-                    Toast.makeText(this, "Data saved", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, getString(R.string.data_saved_msg), Toast.LENGTH_LONG).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             } else {
-                Toast.makeText(this, "Empty input", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.empty_input_msg), Toast.LENGTH_LONG).show();
             }
-        } else {
-            requestWritePerm();
-            saveDataTxt();
-        }
     }
 
     public void checkDataTxt() {
-        if (permissionStatus == PackageManager.PERMISSION_GRANTED) {
             String login = mLoginInput.getText().toString();
             String password = mPswrdInput.getText().toString();
             String checkLogin = "";
             String checkPswrd = "";
-            try {
-                BufferedReader reader = new BufferedReader(new FileReader(new File(DOWNLOADS_PATH, FILE_NAME)));
+            try(BufferedReader reader = new BufferedReader(new FileReader(new File(DOWNLOADS_PATH, FILE_NAME)))) {
                 checkLogin = reader.readLine();
                 checkPswrd = reader.readLine();
-                reader.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
             if(!checkLogin.equals("") || !checkPswrd.equals("")) {
                 if (login.equals(checkLogin) && password.equals(checkPswrd)) {
-                    Toast.makeText(this, "Correct input", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, getString(R.string.correct_input_msg), Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(this, "Incorrect input", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, getString(R.string.incorrect_input_msg), Toast.LENGTH_LONG).show();
                 }
             } else {
-                Toast.makeText(this, "No data found", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.no_data_msg), Toast.LENGTH_LONG).show();
             }
-        } else {
-            requestReadPerm();
-            checkDataTxt();
-        }
     }
 
-    private void getSaveMode(){
+    private boolean getSaveMode(){
         isExternal = sp.getBoolean("isExternal", false);
-        mSaveModeCheckbox.setChecked(isExternal);
+        return isExternal;
     }
 
     public void requestReadPerm() {
@@ -229,11 +216,19 @@ public class T_522 extends ToolbarActivity {
 
     public boolean isExternalStorageWritable() {
         String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state) ||
-                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
-            return true;
+        return Environment.MEDIA_MOUNTED.equals(state) ||
+                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == REQUEST_CODE_PERMISSION_READ_STORAGE && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            checkDataTxt();
+        } else if (requestCode == REQUEST_CODE_PERMISSION_WRITE_STORAGE && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            saveDataTxt();
         }
-        return false;
     }
 
 }
