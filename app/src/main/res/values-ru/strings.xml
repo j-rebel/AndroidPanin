@@ -280,11 +280,18 @@
         <item>721</item>
         <item>722</item>
     </string-array>
+
+    <string name="task_label">Задача </string>
+    <string name="random_descr_label">Описание случайно сгенерированного элемента</string>
+    <string name="header_label">Header: </string>
+    <string name="class_label">Class: </string>
+    <string name="no_resource_label">Нет ресурса</string>
     <!--END 511 strings-->
 
 
     <!--BEGIN 512 strings-->
     <string name="change_bg">Сменить фон</string>
+    <string name="bg_not_found">Background not found, set to default</string>
     <!--END 512 strings-->
 
 

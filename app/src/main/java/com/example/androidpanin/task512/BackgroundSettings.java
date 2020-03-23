@@ -16,7 +16,6 @@ public class BackgroundSettings extends ToolbarActivity {
 
     private EditText mNameInput;
     private Button mOkBtn;
-    private String imgName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,16 +35,12 @@ public class BackgroundSettings extends ToolbarActivity {
         mOkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgName = mNameInput.getText().toString();
-                returnToCalc(imgName);
+                Intent intent = new Intent();
+                intent.putExtra("IMAGE_NAME", mNameInput.getText().toString());
+                setResult(RESULT_OK, intent);
+                finish();
             }
         });
-    }
-
-    public void returnToCalc(String fileName) {
-        Intent intent = new Intent(this, T_512.class);
-        intent.putExtra("IMAGE_NAME", fileName);
-        startActivity(intent);
     }
 
 }

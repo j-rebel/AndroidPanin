@@ -49,14 +49,10 @@ public class T_512 extends ToolbarActivity implements View.OnClickListener {
         int permissionStatus = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_EXTERNAL_STORAGE);
 
-        if (permissionStatus == PackageManager.PERMISSION_GRANTED) {
-            loadImg();
+        if (permissionStatus != PackageManager.PERMISSION_GRANTED && !isExternalStorageWritable()) {
+            requestReadPerm();
         }
-        else {
-            ActivityCompat.requestPermissions(this,
-                    new String[] {Manifest.permission.READ_EXTERNAL_STORAGE},
-                    REQUEST_CODE_PERMISSION_READ_STORAGE);
-        }
+
         initViews();
     }
 
@@ -135,28 +131,37 @@ public class T_512 extends ToolbarActivity implements View.OnClickListener {
 
     public void proceedToSettings() {
         Intent intent = new Intent(this, BackgroundSettings.class);
-        startActivity(intent);
+        startActivityForResult(intent, 1);
     }
 
-    private void loadImg() {
+    private void loadImg(String IMAGE_NAME) {
         ImageView view = findViewById(R.id.backgroundImg);
-        String imgName = getIntent().getStringExtra("IMAGE_NAME");
-        if (isExternalStorageWritable() & imgName != null) {
-            File file = new File(DOWNLOADS_PATH, imgName);
+        if (isExternalStorageWritable()) {
+            File file = new File(DOWNLOADS_PATH, IMAGE_NAME);
             Bitmap b = BitmapFactory.decodeFile(file.getAbsolutePath());
             view.setImageBitmap(b);
             Toast.makeText(this, file.getAbsolutePath(), Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "Background not found, set to default", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.bg_not_found), Toast.LENGTH_LONG).show();
         }
     }
 
     public boolean isExternalStorageWritable() {
         String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state) ||
-                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
-            return true;
-        }
-        return false;
+        return Environment.MEDIA_MOUNTED.equals(state) ||
+                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data == null) {return;}
+        String IMAGE_NAME = data.getStringExtra("IMAGE_NAME");
+        loadImg(IMAGE_NAME);
+    }
+
+    public void requestReadPerm() {
+        ActivityCompat.requestPermissions(this,
+                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                REQUEST_CODE_PERMISSION_READ_STORAGE);
     }
 }

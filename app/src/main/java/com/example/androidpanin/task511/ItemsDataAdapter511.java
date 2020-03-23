@@ -106,4 +106,8 @@ public class ItemsDataAdapter511 extends BaseAdapter {
     public List<ItemData511> getItems() {
         return items;
     }
+
+    public void setItems(List<ItemData511> items) {
+        this.items = items;
+    }
 }

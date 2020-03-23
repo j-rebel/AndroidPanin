@@ -14,6 +14,7 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_book_round"
         android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
         android:theme="@style/AppThemeBlack"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".task711.EveningActivity"
@@ -118,7 +119,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".StartScreenActivity" />
         </activity>
-        <activity android:name=".task512.BackgroundSettings" />
+        <activity android:name=".task512.BackgroundSettings"
+            android:parentActivityName=".task512.T_512">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".task512.T_512" />
+        </activity>
         <activity
             android:name=".task512.T_512"
             android:parentActivityName=".StartScreenActivity">
