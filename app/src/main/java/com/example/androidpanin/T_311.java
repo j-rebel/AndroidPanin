@@ -34,7 +34,7 @@ public class T_311 extends ToolbarActivity implements View.OnClickListener {
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-        mInputField = findViewById(R.id.inputField);
+        mInputField = findViewById(R.id.inputPhone);
         mNineBtn = findViewById(R.id.nineBtn);
         mEightBtn = findViewById(R.id.eightBtn);
         mSevenBtn = findViewById(R.id.sevenBtn);

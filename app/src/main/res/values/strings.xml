@@ -323,4 +323,21 @@
     <string name="sync_button_text">Sync</string>
     <string name="run_button_text">Run</string>
     <!--END 711 strings-->
+
+    <!--BEGIN 721 strings-->
+    <string name="adress_input_label">Введите адрес или координаты</string>
+    <string name="search_button_label">Искать</string>
+    <string name="input_empty_msg">Пустой ввод</string>
+    <!--END 721 strings-->
+
+    <!--BEGIN 722 strings-->
+    <string name="switch_call">Позвонить по телефону</string>
+    <string name="switch_sms">Отправить СМС</string>
+    <string name="call_button">Звоним</string>
+    <string name="sms_button">Отправляем</string>
+    <string name="number_input">Введите номер телефона</string>
+    <string name="text_input">Введите текст сообщения</string>
+    <string name="success">Успешно отправлено!</string>
+
+    <!--END 722 strings-->
 </resources>

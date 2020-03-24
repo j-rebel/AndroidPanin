@@ -322,4 +322,20 @@
     <string name="sync_button_text">Sync</string>
     <string name="run_button_text">Run</string>
     <!--END 711 strings-->
+
+    <!--BEGIN 721 strings-->
+    <string name="adress_input_label">Enter address or coordinates</string>
+    <string name="search_button_label">Search</string>
+    <string name="input_empty_msg">Empty input</string>
+    <!--END 721 strings-->
+
+    <!--BEGIN 722 strings-->
+    <string name="switch_call">Call</string>
+    <string name="switch_sms">Send SMS</string>
+    <string name="call_button">Call</string>
+    <string name="sms_button">Send</string>
+    <string name="number_input">Enter phone number</string>
+    <string name="text_input">Enter SMS text</string>
+    <string name="success">Successfully sent!</string>
+    <!--END 722 strings-->
 </resources>
