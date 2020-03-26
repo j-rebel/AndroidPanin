@@ -286,6 +286,8 @@
     <string name="header_label">Header: </string>
     <string name="class_label">Class: </string>
     <string name="no_resource_label">Нет ресурса</string>
+    <string name="missing_read_perm">Missing read permission</string>
+    <string name="missing_write_perm">Missing write permission</string>
     <!--END 511 strings-->
 
 

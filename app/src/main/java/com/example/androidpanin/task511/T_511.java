@@ -1,11 +1,11 @@
 package com.example.androidpanin.task511;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
@@ -26,20 +26,18 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class T_511 extends ToolbarActivity {
 
-    private int permissionRead;
-    private int permissionWrite;
-
-    public static final int REQUEST_CODE_PERMISSION_READ_STORAGE = 10;
-    public static final int REQUEST_CODE_PERMISSION_WRITE_STORAGE = 20;
+    private static final int PERMISSION_ALL = 15;
+    String[] PERMISSIONS = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+    };
     public static final File DOWNLOADS_PATH = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
     public static final String FILE_NAME = "data.txt";
 
     private ItemsDataAdapter511 adapter;
-    private ArrayList<ItemData511> adapterList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,18 +45,13 @@ public class T_511 extends ToolbarActivity {
         Utils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_511);
 
-        permissionRead = ContextCompat.checkSelfPermission(this,
-                Manifest.permission.READ_EXTERNAL_STORAGE);
-        permissionWrite = ContextCompat.checkSelfPermission(this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (!hasPermissions(this, PERMISSIONS)) {
+            ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
+        }
 
-        initViews();
-    }
-
-    private void initViews() {
         initToolbar();
         initFab();
-        initList();
+        initAdapter();
     }
 
     public void initToolbar() {
@@ -72,50 +65,31 @@ public class T_511 extends ToolbarActivity {
             @Override
             public void onClick(View view) {
                 adapter.addItem(new ItemData511());
-                if (permissionWrite == PackageManager.PERMISSION_GRANTED & isExternalStorageWritable()) {
-                    writeDataTxt(adapter.getItems());
-                } else {
-                    requestWritePerm();
-                }
             }
         });
     }
 
-    public void initList() {
+    public void initAdapter() {
+
         ListView listView = findViewById(R.id.customList);
 
-        adapter = new ItemsDataAdapter511(this, adapterList);
+        adapter = new ItemsDataAdapter511(this, readDataTxt());
+
+        if(adapter.getItems().isEmpty()) {
+            adapter.setItems(createDefaultListFromRes());
+        }
+
+        writeDataTxt();
+
         listView.setAdapter(adapter);
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                showItemData(position);
+                Toast.makeText(T_511.this, adapter.getItem(position).toString(), Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
-
-        initAdapter();
-    }
-
-    public void initAdapter() {
-        if (permissionRead == PackageManager.PERMISSION_GRANTED) {
-            adapterList = readDataTxt();
-        } else {
-            adapterList = createDefaultListFromRes();
-        }
-
-        if(adapterList.isEmpty()) {
-            adapterList = createDefaultListFromRes();
-        }
-
-        adapter.setItems(adapterList);
-
-        if (permissionWrite == PackageManager.PERMISSION_GRANTED & isExternalStorageWritable()) {
-            writeDataTxt(adapter.getItems());
-        } else {
-            requestWritePerm();
-        }
     }
 
     private ArrayList<ItemData511> createDefaultListFromRes() {
@@ -125,7 +99,7 @@ public class T_511 extends ToolbarActivity {
 
         for (String id : itemIds) {
             String resName = "screen_" + id;
-            int resId = getResources().getIdentifier(resName,"drawable", getPackageName());
+            int resId = getResources().getIdentifier(resName, "drawable", getPackageName());
 
             result.add(new ItemData511(resId,
                     getString(R.string.task_label) + " " + id,
@@ -145,10 +119,10 @@ public class T_511 extends ToolbarActivity {
                         temp[1],
                         getStringFromResourcesByName("start_screen_option_" + temp[3]),
                         returnCorrectClassPath(temp[3])));
-                }
+            }
         }
         return result;
-        }
+    }
 
     public String returnCorrectClassPath(String id) {
         if (Integer.parseInt(id) > 411) {
@@ -156,18 +130,6 @@ public class T_511 extends ToolbarActivity {
         } else {
             return "com.example.androidpanin.T_" + id;
         }
-    }
-
-    public void requestReadPerm() {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                    REQUEST_CODE_PERMISSION_READ_STORAGE);
-    }
-
-    public void requestWritePerm() {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                    REQUEST_CODE_PERMISSION_WRITE_STORAGE);
     }
 
     public boolean isExternalStorageWritable() {
@@ -188,74 +150,65 @@ public class T_511 extends ToolbarActivity {
         return result;
     }
 
-    private void showItemData(int position) {
-        ItemData511 itemData = adapter.getItem(position);
-        Toast.makeText(T_511.this,
-                getString(R.string.header_label) + itemData.getHeader() + "\n" +
-                        getString(R.string.class_label) + itemData.getClassName() + "\n",
-                Toast.LENGTH_SHORT).show();
-    }
-
-    private void writeDataTxt(List<ItemData511> list) {
-            if (isExternalStorageWritable()) {
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(DOWNLOADS_PATH, FILE_NAME)))) {
-                    if(!list.isEmpty()) {
-                        StringBuilder result = new StringBuilder();
-                        for (ItemData511 item : list) {
-                            result.append(item.toString());
-                        }
-                        writer.write(result.toString());
-                    } else {
-                        writer.write("");
+    private void writeDataTxt() {
+        if (isExternalStorageWritable()) {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(DOWNLOADS_PATH, FILE_NAME)))) {
+                if (!adapter.getItems().isEmpty()) {
+                    StringBuilder result = new StringBuilder();
+                    for (ItemData511 item : adapter.getItems()) {
+                        result.append(item.toString());
                     }
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    writer.write(result.toString());
+                } else {
+                    writer.write("");
                 }
-            }
-    }
-
-    public ArrayList<ItemData511> readDataTxt() {
-            try(BufferedReader br = new BufferedReader(new FileReader(new File(DOWNLOADS_PATH, FILE_NAME)))){
-                String dataFromFile;
-                StringBuilder builder = new StringBuilder();
-                while ((dataFromFile = br.readLine()) != null) {
-                    builder.append(dataFromFile);
-                }
-                dataFromFile = builder.toString();
-                return createItemsFromString(dataFromFile);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            return new ArrayList<>();
+        }
+    }
+
+    public ArrayList<ItemData511> readDataTxt() {
+        try (BufferedReader br = new BufferedReader(new FileReader(new File(DOWNLOADS_PATH, FILE_NAME)))) {
+            String dataFromFile;
+            StringBuilder builder = new StringBuilder();
+            while ((dataFromFile = br.readLine()) != null) {
+                builder.append(dataFromFile);
+            }
+            dataFromFile = builder.toString();
+            return createItemsFromString(dataFromFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return new ArrayList<>();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        if (permissionWrite == PackageManager.PERMISSION_GRANTED & isExternalStorageWritable()) {
-            writeDataTxt(adapter.getItems());
-        } else {
-            requestWritePerm();
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            writeDataTxt();
         }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (permissionWrite == PackageManager.PERMISSION_GRANTED & isExternalStorageWritable()) {
-            writeDataTxt(adapter.getItems());
-        } else {
-            requestWritePerm();
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            writeDataTxt();
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_CODE_PERMISSION_READ_STORAGE && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            initAdapter();
-        } else if (requestCode == REQUEST_CODE_PERMISSION_WRITE_STORAGE && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            writeDataTxt(adapter.getItems());
+    public static boolean hasPermissions(Context context, String... permissions) {
+        if (context != null && permissions != null) {
+            for (String permission : permissions) {
+                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+                    return false;
+                }
+            }
         }
+        return true;
     }
 }
