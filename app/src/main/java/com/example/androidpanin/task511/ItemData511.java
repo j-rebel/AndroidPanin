@@ -1,17 +1,30 @@
 package com.example.androidpanin.task511;
 
-import android.graphics.Bitmap;
+import androidx.annotation.DrawableRes;
+
+import com.example.androidpanin.R;
 
 public class ItemData511 {
 
-    private Bitmap image;
+    private int image;
     private String header;
     private String description;
     private String className;
     private String classId;
     private Class activityClass;
+    private static int COUNT_GENERATED = 1;
 
-    public ItemData511(Bitmap image, String header, String description, String className) {
+    public ItemData511() {
+        this.image = R.drawable.def_img;
+        this.header = "Задача " + COUNT_GENERATED;
+        this.description = "Описание случайно сгенерированного элемента";
+        this.classId = "511";
+        this.className = "511";
+        this.activityClass = T_511.class;
+        COUNT_GENERATED++;
+    }
+
+    public ItemData511(@DrawableRes int image, String header, String description, String className) {
         this.image = image;
         this.header = header;
         this.description = description;
@@ -26,10 +39,10 @@ public class ItemData511 {
         }
     }
 
-    public Bitmap getImage() {
+    @DrawableRes
+    public int getImage() {
         return image;
     }
-
     public String getHeader() {
         return header;
     }
@@ -48,5 +61,19 @@ public class ItemData511 {
 
     public String getClassId() {
         return classId;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append(getImage());
+        builder.append(",");
+        builder.append(getHeader());
+        builder.append(",");
+        builder.append(getDescription());
+        builder.append(",");
+        builder.append(getClassId());
+        builder.append(";");
+        return builder.toString();
     }
 }

@@ -292,6 +292,7 @@
     <!--BEGIN 512 strings-->
     <string name="change_bg">Сменить фон</string>
     <string name="bg_not_found">Background not found, set to default</string>
+    <string name="read_perm_failed">Read permission not granted</string>
     <!--END 512 strings-->
 
 

@@ -2,7 +2,6 @@ package com.example.androidpanin.task511;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.transition.Transition;
 import com.example.androidpanin.R;
 
 import java.util.ArrayList;
@@ -79,11 +76,9 @@ public class ItemsDataAdapter511 extends BaseAdapter {
         Button okBtn = view.findViewById(R.id.okBtn);
         Button resetBtn = view.findViewById(R.id.resetBtn);
 
-        //image.setImageBitmap(itemData.getImage());
-
         Glide.with(context)
-                .asBitmap()
                 .load(itemData.getImage())
+                .placeholder(R.drawable.def_img)
                 .into(image);
 
         header.setText(itemData.getHeader());
@@ -119,5 +114,6 @@ public class ItemsDataAdapter511 extends BaseAdapter {
 
     public void setItems(List<ItemData511> items) {
         this.items = items;
+        notifyDataSetChanged();
     }
 }

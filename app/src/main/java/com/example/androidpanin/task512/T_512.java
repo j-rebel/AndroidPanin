@@ -1,14 +1,8 @@
 package com.example.androidpanin.task512;
 
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
@@ -24,7 +18,13 @@ import com.example.androidpanin.Utils;
 
 import java.io.File;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 public class T_512 extends ToolbarActivity implements View.OnClickListener {
+    private static final String IMAGE_NAME_KEY = "IMAGE_NAME";
     private TextView mInputField;
     private Button mNineBtn;
     private Button mEightBtn;
@@ -36,27 +36,33 @@ public class T_512 extends ToolbarActivity implements View.OnClickListener {
     private Button mTwoBtn;
     private Button mOneBtn;
     private Button mZeroBtn;
-    private Button mDotBtn;
-    private Button mchangeBgBtn;
 
     private static final int REQUEST_CODE_PERMISSION_READ_STORAGE = 10;
     private static final File DOWNLOADS_PATH = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+    private String imageName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Utils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_512);
-        int permissionStatus = ContextCompat.checkSelfPermission(this,
-                Manifest.permission.READ_EXTERNAL_STORAGE);
-
-        if (permissionStatus != PackageManager.PERMISSION_GRANTED && !isExternalStorageWritable()) {
-            requestReadPerm();
-        }
 
         initViews();
     }
 
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        imageName = savedInstanceState.getString(IMAGE_NAME_KEY);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putString(IMAGE_NAME_KEY, imageName);
+    }
 
     private void initViews() {
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
@@ -73,8 +79,7 @@ public class T_512 extends ToolbarActivity implements View.OnClickListener {
         mTwoBtn = findViewById(R.id.twoBtn);
         mOneBtn = findViewById(R.id.oneBtn);
         mZeroBtn = findViewById(R.id.zeroBtn);
-        mDotBtn = findViewById(R.id.dotBtn);
-        mchangeBgBtn = findViewById(R.id.changeBgBtn);
+        Button changeBgBtn = findViewById(R.id.changeBgBtn);
 
         mNineBtn.setOnClickListener(this);
         mEightBtn.setOnClickListener(this);
@@ -86,7 +91,7 @@ public class T_512 extends ToolbarActivity implements View.OnClickListener {
         mTwoBtn.setOnClickListener(this);
         mOneBtn.setOnClickListener(this);
         mZeroBtn.setOnClickListener(this);
-        mchangeBgBtn.setOnClickListener(new View.OnClickListener() {
+        changeBgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 proceedToSettings();
@@ -137,13 +142,10 @@ public class T_512 extends ToolbarActivity implements View.OnClickListener {
 
     private void loadImg(String IMAGE_NAME) {
         ImageView view = findViewById(R.id.backgroundImg);
-        if (isExternalStorageWritable()) {
+        if (isExternalStorageReadable()) {
             File file = new File(DOWNLOADS_PATH, IMAGE_NAME);
-            Bitmap b = BitmapFactory.decodeFile(file.getAbsolutePath());
-            //view.setImageBitmap(b);
             Glide.with(this)
-                    .asBitmap()
-                    .load(b)
+                    .load(file)
                     .into(view);
             Toast.makeText(this, file.getAbsolutePath(), Toast.LENGTH_LONG).show();
         } else {
@@ -151,7 +153,7 @@ public class T_512 extends ToolbarActivity implements View.OnClickListener {
         }
     }
 
-    public boolean isExternalStorageWritable() {
+    public boolean isExternalStorageReadable() {
         String state = Environment.getExternalStorageState();
         return Environment.MEDIA_MOUNTED.equals(state) ||
                 Environment.MEDIA_MOUNTED_READ_ONLY.equals(state);
@@ -159,9 +161,29 @@ public class T_512 extends ToolbarActivity implements View.OnClickListener {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (data == null) {return;}
-        String IMAGE_NAME = data.getStringExtra("IMAGE_NAME");
-        loadImg(IMAGE_NAME);
+        if (data == null) {
+            return;
+        }
+        imageName = data.getStringExtra(IMAGE_NAME_KEY);
+        int permissionStatus = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.READ_EXTERNAL_STORAGE);
+        if (permissionStatus != PackageManager.PERMISSION_GRANTED) {
+            requestReadPerm();
+            loadImg(imageName);
+        } else {
+            loadImg(imageName);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == REQUEST_CODE_PERMISSION_READ_STORAGE && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            loadImg(imageName);
+        } else {
+            Toast.makeText(this, getString(R.string.read_perm_failed), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void requestReadPerm() {
